@@ -1,0 +1,12 @@
+<view>
+    <text>首页</text>
+
+    <view wx:for="{{testArray}}">
+    {{index}} : {{item.message}}
+    </view>
+
+    <block wx:for="{{testArray}}">
+        <text>no.{{index}}</text>
+        <view>is {{item.message}}</view>
+    </block>
+</view>

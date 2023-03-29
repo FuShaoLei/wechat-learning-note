@@ -1,0 +1,15 @@
+<!--custom-tab-bar/index.wxml-->
+  <t-tab-bar
+  value="{{active}}"
+  bindchange="onChange"
+  theme="tag" 
+  split="{{false}}">
+  <t-tab-bar-item 
+  wx:for="{{list}}"
+  icon="{{item.icon}}"
+  data-path="{{item.url}}"
+  wx:key="index"> 
+   {{item.text}} 
+   </t-tab-bar-item>
+</t-tab-bar>
+
