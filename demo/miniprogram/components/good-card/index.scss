@@ -1,0 +1,14 @@
+/* components/good-card/index.wxss */
+.goods-card{
+  padding: 18rpx 18rpx;
+  background-color: #fff;
+}
+.card-price-text {
+  font-weight: bolder;
+  font-size: 50rpx;
+}
+.card-down-block {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}

@@ -1,2 +1,14 @@
 <!--pages/mine/index.wxml-->
-<text>我的</text>
+<view>
+    <view class="avator-block">
+        <t-avatar image="{{ava}}" />
+        <text class="my__name">微信用户</text>
+    </view>
+
+    <view class="list-block">
+        <t-cell-group  theme="card" wx:for="{{listItemData}}">
+            <t-cell title="{{item.title}}" leftIcon="{{item.icon}}" hover arrow />
+        </t-cell-group>
+    </view>
+
+</view>

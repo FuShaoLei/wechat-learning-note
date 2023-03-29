@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "t-search": "tdesign-miniprogram/search/search",
+    "test-img": "../../components/good-card",
+    "goods-list": "../../components/goods-list"
+  }
 }

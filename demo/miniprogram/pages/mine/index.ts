@@ -1,10 +1,41 @@
 // pages/mine/index.ts
+const avator = 'https://tdesign.gtimg.com/miniprogram/images/example2.png';
+
+
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
+        ava:'https://tdesign.gtimg.com/miniprogram/images/example2.png',
+        listItemData: [
+            {
+                icon: 'internet',
+                title: '互联网',
+                url: '/'
+            },
+            {
+                icon: 'logo-qq',
+                title: '扣扣',
+                url: '/'
+            },
+            {
+                icon: 'notification',
+                title: '提醒',
+                url: '/'
+            },
+            {
+                icon: 'qrcode',
+                title: '扫描二维码',
+                url: '/'
+            },
+            {
+                icon: 'shop',
+                title: '购物',
+                url: '/'
+            },
+        ]
 
     },
 

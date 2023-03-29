@@ -1,12 +1,6 @@
-<view>
-    <text>首页</text>
-
-    <view wx:for="{{testArray}}">
-    {{index}} : {{item.message}}
+<view class="home-block">
+    <view class="example-search">
+        <t-search model:value="{{value}}" placeholder="搜索商品" />
     </view>
-
-    <block wx:for="{{testArray}}">
-        <text>no.{{index}}</text>
-        <view>is {{item.message}}</view>
-    </block>
+  <goods-list></goods-list>
 </view>

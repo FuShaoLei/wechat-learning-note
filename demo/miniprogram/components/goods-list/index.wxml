@@ -1,0 +1,6 @@
+<!--components/goods-list/index.wxml-->
+<view class="goods-list-wrap">
+  <block wx:for="{{items}}">
+      <good-card priceText="{{item.price}}"></good-card>
+  </block>
+</view>

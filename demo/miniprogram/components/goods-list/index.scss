@@ -1,0 +1,8 @@
+/* components/goods-list/index.wxss */
+.goods-list-wrap {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0;
+  background: #f3f4f5;
+}
