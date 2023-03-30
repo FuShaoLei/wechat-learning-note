@@ -3,7 +3,10 @@
         "pages/index/index",
         "pages/mine/index",
         "custom-tab-bar/index",
-        "pages/cart/index"
+        "pages/cart/index",
+        "pages/other/index",
+        "pages/personal/index",
+        "pages/detail/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -28,8 +31,12 @@
                 "text": "我的"
             },
             {
-              "pagePath": "pages/cart/index",
-              "text": "购物车"
+                "pagePath": "pages/cart/index",
+                "text": "购物车"
+            },
+            {
+                "pagePath": "pages/other/index",
+                "text": "测试页面"
             }
         ]
     },

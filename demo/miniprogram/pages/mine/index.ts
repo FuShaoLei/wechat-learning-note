@@ -8,7 +8,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        ava:'https://tdesign.gtimg.com/miniprogram/images/example2.png',
+        ava: 'https://tdesign.gtimg.com/miniprogram/images/example2.png',
         listItemData: [
             {
                 icon: 'internet',
@@ -38,7 +38,6 @@ Page({
         ]
 
     },
-
     /**
      * 生命周期函数--监听页面加载
      */
@@ -56,14 +55,14 @@ Page({
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow(){
-      this.getTabBar().init();
-      if (typeof this.getTabBar === 'function' &&
-    this.getTabBar()) {
-    this.getTabBar().setData({
-      active: 2
-    })
-  }
+    onShow() {
+        this.getTabBar().init();
+        if (typeof this.getTabBar === 'function' &&
+            this.getTabBar()) {
+            this.getTabBar().setData({
+                active: 2
+            })
+        }
     },
 
     /**
@@ -99,5 +98,9 @@ Page({
      */
     onShareAppMessage() {
 
+    },
+    clickAvator(){
+        console.log("clickAvator");
+        wx.navigateTo({url:'/pages/personal/index'});
     }
 })

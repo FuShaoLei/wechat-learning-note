@@ -1,18 +1,18 @@
 <!--components/good-card/index.wxml-->
-<view class="goods-card">
-  <view class="goods-card__main">
-    <image class="img" src="{{avator}}"></image>
-  </view>
-  <view>
-    <text>纯色纯棉休闲圆领短袖T恤纯白亲肤厚柔软细腻</text>
-  </view>
+<view class="goods-card" bindtap="onTap">
+    <view class="img__main">
+        <t-image class="img__my" mode="aspectFill"  src="{{avator}}"></t-image>
+    </view>
+    <view>
+        <text>纯色纯棉休闲圆领短袖T恤纯白亲肤厚柔软细腻</text>
+    </view>
 
-  <view class="card-down-block">
-  <view>
-    <text class="card-price-text">￥{{priceText}}</text>
-  </view>
-  <view>
-    <t-icon name="cart" size="48rpx" data-name="cart"></t-icon>
-  </view>
-  </view>
+    <view class="card-down-block">
+        <view class="card-price">
+            <text class="card-price-text">￥{{priceText}}</text>
+        </view>
+        <view class="card-icon">
+            <t-icon name="cart" size="48rpx" data-name="cart"></t-icon>
+        </view>
+    </view>
 </view>

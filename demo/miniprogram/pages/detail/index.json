@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "t-swiper": "tdesign-miniprogram/swiper/swiper",
+        "t-popup": "tdesign-miniprogram/popup/popup",
+    "t-button": "tdesign-miniprogram/button/button"
+    }
+}

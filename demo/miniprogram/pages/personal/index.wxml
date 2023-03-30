@@ -1,0 +1,18 @@
+<!--pages/personal/index.wxml-->
+<view class="personal-container">
+
+    <view class="personal__main">
+        <t-cell-group theme="card">
+            <t-cell title="头像" arrow>
+                <t-avatar slot="note" image="https://tdesign.gtimg.com/miniprogram/images/example2.png"></t-avatar>
+            </t-cell>
+            <t-cell title="性别" note="男" hover arrow />
+            <t-cell title="昵称" note="任我行" hover arrow />
+            <t-cell title="联系方式" note="1563250958" hover arrow />
+        </t-cell-group>
+    </view>
+
+    <view class="unlogin-block">
+        切换账号登录
+    </view>
+</view>

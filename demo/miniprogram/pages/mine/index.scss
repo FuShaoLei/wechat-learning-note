@@ -2,11 +2,12 @@
 .avator-block {
     margin-left: 50rpx;
     display: flex;
+    align-items: center;
 }
+.avator__name{
+    margin-left: 40rpx;
+}
+
 .list-block {
     margin-top: 60rpx;
-}
-.my__name{
-    margin-top: 20rpx;
-    margin-left: 20rpx;
 }

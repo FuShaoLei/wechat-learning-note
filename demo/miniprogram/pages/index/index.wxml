@@ -2,5 +2,10 @@
     <view class="example-search">
         <t-search model:value="{{value}}" placeholder="搜索商品" />
     </view>
-  <goods-list></goods-list>
+    <goods-list
+     goodsItems="{{goodsItems}}"
+     bind:clickcc="onClickCardItem"
+     >
+     </goods-list>
+    <view class="gap"></view>
 </view>

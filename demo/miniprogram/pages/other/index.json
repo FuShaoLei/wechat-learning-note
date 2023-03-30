@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "good-card": "../../components/good-card",
+        "goods-list": "../../components/goods-list"
+    }
+}

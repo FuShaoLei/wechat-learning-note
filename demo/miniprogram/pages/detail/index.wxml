@@ -1,0 +1,18 @@
+<!--pages/detail/index.wxml-->
+<view class="detail-block">
+    <t-swiper 
+        current="{{current}}" 
+        autoplay="{{autoplay}}" 
+        duration="{{duration}}" 
+        interval="{{interval}}" 
+        navigation="{{ { type: 'dots' } }}" 
+        list="{{swiperList}}">
+    </t-swiper>
+    <view class="price-block">
+      <text class="price-real">￥299</text>
+      <text class="price-pre">￥300</text>
+      <text class="for-sold">已售1032</text>
+    </view>
+
+    
+</view>

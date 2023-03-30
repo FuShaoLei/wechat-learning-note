@@ -1,0 +1,19 @@
+/* pages/detail/index.wxss */
+
+.price-real{
+    margin-left: 20rpx;
+    color: red;
+    font-weight: bolder;
+    font-size: 50rpx;
+}
+.price-pre{
+    color: rgb(170, 158, 158);
+    text-decoration: line-through;
+}
+
+.for-sold{
+    color: #333;
+    font-size: 30rpx;
+    position: absolute;
+    right: 20rpx;
+}

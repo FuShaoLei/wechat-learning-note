@@ -1,12 +1,16 @@
 <!--pages/mine/index.wxml-->
 <view>
-    <view class="avator-block">
-        <t-avatar image="{{ava}}" />
-        <text class="my__name">微信用户</text>
+    <view class="avator-block" bindtap="clickAvator">
+        <view class="avator__img">
+            <t-avatar image="{{ava}}" />
+        </view>
+        <view class="avator__name">
+            <text class="my__name">微信用户</text>
+        </view>
     </view>
 
     <view class="list-block">
-        <t-cell-group  theme="card" wx:for="{{listItemData}}">
+        <t-cell-group theme="card" wx:for="{{listItemData}}">
             <t-cell title="{{item.title}}" leftIcon="{{item.icon}}" hover arrow />
         </t-cell-group>
     </view>

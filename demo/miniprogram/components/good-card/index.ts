@@ -6,7 +6,7 @@ Component({
     properties: {
       priceText:{
         type:Number,
-        value:0
+        value:999
       }
     },
 
@@ -21,6 +21,8 @@ Component({
      * 组件的方法列表
      */
     methods: {
-
+        onTap:function() {
+            this.triggerEvent('clickc', {id:1});
+        }
     }
 })

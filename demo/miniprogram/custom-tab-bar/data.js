@@ -13,5 +13,10 @@ export default [
     icon: 'user',
     text: '个人中心',
     url: '/pages/mine/index',
+  },
+  {
+    icon: 'format-horizontal-align-center',
+    text: '测试页面',
+    url: '/pages/other/index',
   }
 ];

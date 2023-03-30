@@ -1,14 +1,30 @@
 /* components/good-card/index.wxss */
-.goods-card{
-  padding: 18rpx 18rpx;
-  background-color: #fff;
+.goods-card {
+    box-sizing: border-box;
+    font-size: 24rpx;
+    padding: 18rpx 18rpx;
+    background-color: #fff;
+    border-radius: 0 0 16rpx 16rpx;
+    border-bottom: none;
+    width: 342rpx
 }
+.img__main{
+    width: 340rpx;
+    height: 340rpx;
+}
+.img__my{
+    width: 338rpx;
+    height: 338rpx;
+}
+
 .card-price-text {
-  font-weight: bolder;
-  font-size: 50rpx;
+    font-weight: bolder;
+    font-size: 40rpx;
 }
+
 .card-down-block {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+    margin-top: 10rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
