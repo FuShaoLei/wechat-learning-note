@@ -3,7 +3,7 @@
     <view class="img__main">
         <t-image class="img__my" mode="aspectFill"  src="{{avator}}"></t-image>
     </view>
-    <view>
+    <view class="text__main">
         <text>纯色纯棉休闲圆领短袖T恤纯白亲肤厚柔软细腻</text>
     </view>
 
@@ -11,7 +11,7 @@
         <view class="card-price">
             <text class="card-price-text">￥{{priceText}}</text>
         </view>
-        <view class="card-icon">
+        <view class="card-icon" catchtap="add2CartHandler">
             <t-icon name="cart" size="48rpx" data-name="cart"></t-icon>
         </view>
     </view>

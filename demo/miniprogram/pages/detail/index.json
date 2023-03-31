@@ -2,6 +2,12 @@
     "usingComponents": {
         "t-swiper": "tdesign-miniprogram/swiper/swiper",
         "t-popup": "tdesign-miniprogram/popup/popup",
-    "t-button": "tdesign-miniprogram/button/button"
+        "t-button": "tdesign-miniprogram/button/button",
+        "t-cell": "tdesign-miniprogram/cell/cell",
+        "t-icon": "tdesign-miniprogram/icon/icon",
+        "t-stepper": "tdesign-miniprogram/stepper/stepper",
+        "t-divider": "tdesign-miniprogram/divider/divider",
+        "t-tag": "tdesign-miniprogram/tag/tag",
+        "t-check-tag": "tdesign-miniprogram/check-tag/check-tag"
     }
 }

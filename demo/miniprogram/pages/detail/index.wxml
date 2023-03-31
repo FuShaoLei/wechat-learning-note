@@ -1,18 +1,36 @@
 <!--pages/detail/index.wxml-->
 <view class="detail-block">
-    <t-swiper 
-        current="{{current}}" 
-        autoplay="{{autoplay}}" 
-        duration="{{duration}}" 
-        interval="{{interval}}" 
-        navigation="{{ { type: 'dots' } }}" 
-        list="{{swiperList}}">
-    </t-swiper>
-    <view class="price-block">
+  <t-swiper current="{{current}}" autoplay="{{autoplay}}" duration="{{duration}}" interval="{{interval}}" navigation="{{ { type: 'dots' } }}" list="{{swiperList}}">
+  </t-swiper>
+
+  <view class="price-block">
+    <view class="price-first-box">
       <text class="price-real">￥299</text>
       <text class="price-pre">￥300</text>
+    </view>
+    <view class="price-second-box">
       <text class="for-sold">已售1032</text>
     </view>
+  </view>
 
-    
+  <t-popup visible="{{visible}}" bind:visible-change="onVisibleChange" placement="bottom">
+    <view class="block">
+      <text class="block__title">白色短袖连衣裙荷叶边裙摆宽松韩版休闲纯白清爽优雅连衣裙</text>
+      <t-icon class="icon__block" name="close" bindtap="handlerCancel"></t-icon>
+
+      <t-divider />
+      <view class="tag__block">
+        <text>颜色</text>
+        <t-tag class="margin-16" variant="light">黑色</t-tag>
+      </view>
+      <t-divider />
+      <view class="stepper__block">
+        <text>购买数量</text>
+        <view class="my_stepper">
+          <t-stepper defaultValue="0" theme="filled" min="0" max="10" />
+        </view>
+      </view>
+    </view>
+  </t-popup>
+  <t-cell bindtap="handlePopup" title="选择样式" bind hover arrow />
 </view>

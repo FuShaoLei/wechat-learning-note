@@ -5,7 +5,9 @@
     <goods-list
      goodsItems="{{goodsItems}}"
      bind:clickcc="onClickCardItem"
+     bind:add2Cart="onClickItem2Cart2"
      >
      </goods-list>
+     <t-toast id="t-toast" />
     <view class="gap"></view>
 </view>

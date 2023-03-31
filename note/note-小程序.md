@@ -22,7 +22,40 @@ npm i tdesign-miniprogram -S --production
 
 ## 底部导航栏
 
-待补充
+1. 首先要在根`app.json`中配置tabbar：
+
+   ```json
+   "tabBar": {
+           "custom": true,
+           "color": "#666666",
+           "selectedColor": "#FF5F15",
+           "backgroundColor": "#ffffff",
+           "borderStyle": "black",
+           "list": [
+               {
+                   "pagePath": "pages/index/index",
+                   "text": "首页"
+               },
+               {
+                   "pagePath": "pages/mine/index",
+                   "text": "我的"
+               },
+               {
+                   "pagePath": "pages/cart/index",
+                   "text": "购物车"
+               },
+               {
+                   "pagePath": "pages/other/index",
+                   "text": "测试页面"
+               }
+           ]
+       },
+   ```
+
+2. 然后在根目录新建一个文件夹名为`custom-tab-bar`，并初始化，其中和普通的page，component一样，有`.json`，`.ts`，`.wxml`，`.scss`文件
+3. 然后你就可以在其中书写自己的逻辑
+
+可参考: https://developers.weixin.qq.com/miniprogram/dev/framework/ability/custom-tabbar.html
 
 ## 列表渲染
 
@@ -37,3 +70,91 @@ npm i tdesign-miniprogram -S --production
 
 - `wx:if`条件渲染，用于判断是否要渲染此代码块
 - `block wx:if`，判断是否要渲染多个组件，这里的block没有任何意义，它仅仅是一个包装元素
+
+## 自定义组件
+
+跟page一样的文件
+
+必要的是要在`.json`文件中声明`"component": true`
+
+```js
+Component({
+
+  behaviors: [],
+
+  properties: {
+    myProperty: { // 属性名
+      type: String,
+      value: ''
+    },
+    myProperty2: String // 简化的定义方式
+  },
+  
+  data: {}, // 私有数据，可用于模板渲染
+
+  lifetimes: {
+    // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
+    attached: function () { },
+    moved: function () { },
+    detached: function () { },
+  },
+
+  // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
+  attached: function () { }, // 此处attached的声明会被lifetimes字段中的声明覆盖
+  ready: function() { },
+
+  pageLifetimes: {
+    // 组件所在页面的生命周期函数
+    show: function () { },
+    hide: function () { },
+    resize: function () { },
+  },
+
+  methods: {
+    onMyButtonTap: function(){
+      this.setData({
+        // 更新属性和数据的方法与更新页面数据的方法类似
+      })
+    },
+    // 内部方法建议以下划线开头
+    _myPrivateMethod: function(){
+      // 这里将 data.A[0].B 设为 'myPrivateData'
+      this.setData({
+        'A[0].B': 'myPrivateData'
+      })
+    },
+    _propertyChange: function(newVal, oldVal) {
+
+    }
+  }
+
+})
+
+```
+
+`bindtap`通常用于组件上绑定点击事件处理函数
+
+`catchtap`可以阻止事件冒泡（传递）到父级组织
+
+## 请求数据
+
+首先要在 [小程序后台 -> 开发-> 开发管理-> 开发设置] 中添加域名，之后才可以正常进行数据请求
+
+```typescript
+wx.request({
+    url: 'https://v1.jinrishici.com/all.json',
+    method:'GET',
+    success(res){
+        if(res){
+            console.log(res.data);
+        }
+    }
+})
+```
+
+## 跳转页面
+
+```typescript
+wx.navigateTo({url:'/pages/detail/index'});
+```
+

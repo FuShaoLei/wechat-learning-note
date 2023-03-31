@@ -3,6 +3,8 @@
   <block wx:for="{{goodsItems}}">
       <good-card
       bind:clickc="onClickCard"
+      data-index="{{index}}"
+      bind:add-cart="onClick2Cart"
        priceText="{{item.price}}"></good-card>
   </block>
 </view>

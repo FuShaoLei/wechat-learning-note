@@ -35,3 +35,23 @@ flex项目属性
 - order：决定项目在容器中的排列顺序，数值越小，排列越靠前
 - flex-grow：决定项目的放大比例，默认值为0，即存在剩余空间，也不放大
 - flex-shrink：决定项目的缩小比例，默认值为1，即如果空间不足时，该项目将缩小，负值对该属性无效
+
+
+
+## Css选择器
+
+| 例子          | 说明                                       |
+| ------------- | ------------------------------------------ |
+| .intro        | 选择`class="intro"`的元素                  |
+| .name1.name2  | 选择class属性中同时有name1和name2的元素    |
+| .name1 .name2 | 选择作为name1元素后代所有类名为name2的元素 |
+| #password     | 选择id="password"的元素                    |
+| *             | 选择所有元素                               |
+| p             | 选择所有p元素                              |
+| p.intro       | 选择`class=intro`的所有p元素               |
+| div,p         | 选择所有div元素和所有p元素                 |
+| div>p         | 选择父元素是div的所有p元素                 |
+| div+p         | 选择紧跟div元素的首个p元素                 |
+| p~ul          | 选择前面有p元素的每个ul元素                |
+
+其余的参考：https://www.w3school.com.cn/cssref/css_selectors.asp
