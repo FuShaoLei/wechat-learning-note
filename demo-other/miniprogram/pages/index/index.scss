@@ -1,0 +1,18 @@
+.loading__block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container__block {
+  margin-top: 30rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.test__btn {
+  margin-bottom: 30rpx;
+}

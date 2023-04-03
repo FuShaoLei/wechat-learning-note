@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<block wx:if="{{isLoading}}">
+  <view class="loading__block">
+    <t-loading theme="dots" size="80rpx" class="wrapper" />
+  </view>
+</block>
+
+<view class="container__block" wx:if="{{!isLoading}}">
+
+<!--对话框-->
+  <t-button 
+    theme="primary" 
+    bindtap="showDialog" 
+    data-key="showTextAndTitle"
+    class="test__btn"
+    size="large">
+  对话框
+  </t-button>
+
+  <t-dialog 
+    visible="{{showTextAndTitle}}" 
+    title="你好" 
+    content="你好你好你好你好你好你好你好你好你好" 
+    confirm-btn="{{ confirmBtn }}" 
+    bind:confirm="closeDialog" />
+
+  <!--动作面板-->
+  <t-button 
+    theme="primary" 
+    class="test__btn"
+    bindtap="handleAction"
+    size="large">
+  动作面板
+  </t-button>
+
+  <t-action-sheet id="t-action-sheet" bind:selected="handleSelected" />
+  <!--下拉菜单-->
+  <t-dropdown-menu class="test__btn">
+    <t-dropdown-item options="{{product.options}}" value="{{product.value}}" bindchange="onChange" />
+    <t-dropdown-item options="{{sorter.options}}" default-value="{{sorter.value}}" />
+  </t-dropdown-menu>
+  <!--消息通知-->
+  <t-button 
+    theme="primary" 
+    class="test__btn"
+    bindtap="handleMessageNotification"
+    size="large">
+    消息通知
+  </t-button>
+  
+  <t-message id="t-message" />
+
+</view>

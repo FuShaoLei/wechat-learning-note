@@ -34,6 +34,9 @@ Page({
       this.setData({
         canIUseGetUserProfile: true
       })
+    } else {
+      let a = "xxx";
+      console.log(a);
     }
   },
   getUserProfile() {

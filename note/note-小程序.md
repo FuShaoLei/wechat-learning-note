@@ -158,3 +158,15 @@ wx.request({
 wx.navigateTo({url:'/pages/detail/index'});
 ```
 
+## 数据缓存
+
+- wx.setStorageSync(string key, any data)：[官方文档](https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.setStorageSync.html)
+- wx.setStorage(Object object)：[官方文档](https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.setStorage.html)
+
+## 其他
+
+延迟执行：https://blog.csdn.net/Boxjod/article/details/122966721
+
+## Page的生命周期
+
+待补充，
