@@ -14,7 +14,9 @@
     "t-collapse": "tdesign-miniprogram/collapse/collapse",
     "t-collapse-panel": "tdesign-miniprogram/collapse-panel/collapse-panel",
     "t-progress": "tdesign-miniprogram/progress/progress",
-    "t-slider": "tdesign-miniprogram/slider/slider"
+    "t-slider": "tdesign-miniprogram/slider/slider",
+    "t-steps": "tdesign-miniprogram/steps/steps",
+    "t-step-item": "tdesign-miniprogram/step-item/step-item"
 
   }
 }

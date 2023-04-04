@@ -115,5 +115,8 @@ Page({
   },
   handleFoldChange(e: any) {
     this.setData({ activeValues: e.detail.value });
+  },
+  onFirstChange(e:any){
+    this.setData({ first: e.detail.current });
   }
 })
