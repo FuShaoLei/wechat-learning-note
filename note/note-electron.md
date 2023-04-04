@@ -89,3 +89,18 @@ app.whenReady().then(() => {
 npm run start
 ```
 
+## electron程序打包成安装包
+
+待补充。
+
+## npm换源
+
+```
+npm config set registry https://registry.npmmirror.com/
+```
+
+> 查看源地址：
+>
+> ```
+> npm config get registry
+> ```
