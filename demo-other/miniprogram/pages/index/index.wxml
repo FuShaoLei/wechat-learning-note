@@ -47,7 +47,40 @@
     size="large">
     消息通知
   </t-button>
-  
   <t-message id="t-message" />
+
+
+  <!--日历-->
+  <t-calendar visible="{{visible}}" bind:confirm="handleConfirm" bind:close="onClose" />
+  <t-cell arrow title="单个选择日历" bind:tap="handleCalendar" note="{{note}}" />
+
+  <!--步进器-->
+  <view class="stepper-example">
+    <t-stepper defaultValue="0" theme="filled" />
+    <t-stepper defaultValue="9" theme="filled" min="5" max="10" />
+    <t-stepper defaultValue="999" theme="filled" max="999" />
+  </view>
+  <!--基础开关-->
+  <t-cell title="基础开关" bordered="{{false}}">
+    <t-switch defaultValue="{{true}}" slot="note" />
+  </t-cell>
+  <!--折叠-->
+  <view class="wrapper">
+    <t-collapse value="{{activeValues}}" bind:change="handleFoldChange">
+      <t-collapse-panel header="折叠面板标题" value="{{1}}" expandIcon>
+        此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容
+      </t-collapse-panel>
+    </t-collapse>
+  </view>
+  <!--进度条-->
+  <view class="progress__block">
+    <t-progress percentage="80" class="progress__item" />
+    <t-progress theme="plump" percentage="80" class="progress__item"  />
+    <t-progress theme="circle" percentage="30" class="progress__item"  />
+  </view>
+  <!--滑动选择器-->
+  <t-slider default-value="{{23}}" />
+  <!--步骤条-->
+  
 
 </view>

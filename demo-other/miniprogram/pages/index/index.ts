@@ -38,6 +38,9 @@ Page({
         },
       ],
     },
+    visible: false,
+    note: '',
+    activeValues: [0]
   },
   onLoad() {
     setTimeout(() => {
@@ -53,7 +56,7 @@ Page({
     this.setData({ [dialogKey]: false });
   },
   handleAction() {
-    ActionSheet.show({  
+    ActionSheet.show({
       theme: ActionSheetTheme.List,
       selector: '#t-action-sheet',
       context: this,
@@ -77,10 +80,10 @@ Page({
       ],
     });
   },
-  handleSelected(e:any) {
+  handleSelected(e: any) {
     console.log(e.detail);
   },
-  onChange(e:any) {
+  onChange(e: any) {
     this.setData({
       'product.value': e.detail.value,
     });
@@ -92,6 +95,25 @@ Page({
       duration: 5000,
       content: '这是一条成功的提示消息',
     });
-  }
+  },
+  handleCalendar() {
+    this.setData({ visible: true });
+  },
+  handleConfirm(e: any) {
+    const { value } = e.detail;
+    const format = (val: any) => {
+      const date = new Date(val);
+      return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+    };
 
+    this.setData({
+      note: format(value),
+    });
+  },
+  onClose({ detail }) {
+    console.log(detail.trigger);
+  },
+  handleFoldChange(e: any) {
+    this.setData({ activeValues: e.detail.value });
+  }
 })

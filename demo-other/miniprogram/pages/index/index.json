@@ -6,6 +6,15 @@
     "t-action-sheet": "tdesign-miniprogram/action-sheet/action-sheet",
     "t-dropdown-menu": "tdesign-miniprogram/dropdown-menu/dropdown-menu",
     "t-dropdown-item": "tdesign-miniprogram/dropdown-item/dropdown-item",
-    "t-message": "tdesign-miniprogram/message/message"
+    "t-message": "tdesign-miniprogram/message/message",
+    "t-calendar": "tdesign-miniprogram/calendar/calendar",
+    "t-cell": "tdesign-miniprogram/cell/cell",
+    "t-stepper": "tdesign-miniprogram/stepper/stepper",
+    "t-switch": "tdesign-miniprogram/switch/switch",
+    "t-collapse": "tdesign-miniprogram/collapse/collapse",
+    "t-collapse-panel": "tdesign-miniprogram/collapse-panel/collapse-panel",
+    "t-progress": "tdesign-miniprogram/progress/progress",
+    "t-slider": "tdesign-miniprogram/slider/slider"
+
   }
 }
