@@ -1,3 +1,15 @@
+## npm换源
+
+```
+npm config set registry https://registry.npmmirror.com/
+```
+
+> 查看源地址：
+>
+> ```
+> npm config get registry
+> ```
+
 ## 安装electron
 
 参考链接：https://zhuanlan.zhihu.com/p/562217675
@@ -91,16 +103,17 @@ npm run start
 
 ## electron程序打包成安装包
 
-待补充。
-
-## npm换源
+参考链接：[官方教程](https://www.electronjs.org/zh/docs/latest/tutorial/%E6%89%93%E5%8C%85%E6%95%99%E7%A8%8B)
 
 ```
-npm config set registry https://registry.npmmirror.com/
+npm install --save-dev @electron-forge/cli
 ```
 
-> 查看源地址：
->
-> ```
-> npm config get registry
-> ```
+```
+npx electron-forge import
+```
+
+```
+npm run make
+```
+
