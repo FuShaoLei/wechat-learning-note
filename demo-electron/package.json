@@ -1,0 +1,15 @@
+{
+  "name": "demo-electron",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "description": "Hello World!",
+  "author": "fsl",
+  "scripts": {
+    "start": "nodemon --watch index.js --exec electron ."
+  },
+  "devDependencies": {
+    "electron": "^24.0.0",
+    "nodemon": "^2.0.22"
+  }
+}
