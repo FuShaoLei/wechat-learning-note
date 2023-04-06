@@ -1,0 +1,5 @@
+<view>
+    <button class="per_btn" bindtap="getSetting">获取用户授权信息</button>
+    <button class="per_btn" bindtap="openSetting">调起设置页面</button>
+    <button class="per_btn" bindtap="getCameraPermission">获取某个权限</button>
+</view>
