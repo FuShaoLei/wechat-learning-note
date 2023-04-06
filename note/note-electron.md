@@ -10,45 +10,36 @@ npm config set registry https://registry.npmmirror.com/
 > npm config get registry
 > ```
 
-## 安装electron
+## 安装yarn
 
-参考链接：https://zhuanlan.zhihu.com/p/562217675
+[yarn官网指路](https://yarnpkg.com/)
 
-在一个目录里进行：
+首先全局安装yarn，我也不知道干嘛要安装这个东西，反正我就是这么成功的
 
-```
-npm init -y
-```
-
-然后
+以管理员身份打开cmd，然后输入
 
 ```
-npm install -g cnpm --registry=https://registry.npmmirror.com
+npm install -g yarn
 ```
 
+安装完成后可以使用`yarn -v`检测是否安装成功
+
+## 第一个electron程序
+
+以下需要yarn的操作都在cmd中进行
+
+初始化项目
+
 ```
-cnpm install --save-dev electron
+yarn init
 ```
 
-在根目录下，修改`package.json`成如下：
+或者可以使用`yarn init -y`快速创建下来，然后才去`packager.json`里去修改
 
-```json
-{
-  "name": "electron",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "Jane Doe",
-  "license": "ISC",
-  "devDependencies": {
-    "electron": "^23.2.1"
-  }
-}
+然后安装electron
+
+```
+yarn add --dev electron
 ```
 
 创建`index.html`：
@@ -95,25 +86,51 @@ app.whenReady().then(() => {
 })
 ```
 
-然后启动：
+然后根据情况修改你的`package.json`文件，下面是示例：
+
+```json
+{
+  "name": "demo-electron",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "god",
+  "description": "Hello World!",
+  "license": "MIT",
+  "scripts": {
+    "start":"electron ."
+  },
+  "devDependencies": {
+    "electron": "^24.0.0"
+  }
+}
+```
+
+> author和description也是要填的，后面使用electron-forge时会用到
+
+运行：
 
 ```
 npm run start
 ```
 
-## electron程序打包成安装包
+## 使用electron-forge打包
 
-参考链接：[官方教程](https://www.electronjs.org/zh/docs/latest/tutorial/%E6%89%93%E5%8C%85%E6%95%99%E7%A8%8B)
+安装electron-forge：
 
 ```
-npm install --save-dev @electron-forge/cli
+yarn add --dev @electron-forge/cli
 ```
+
+然后执行
 
 ```
 npx electron-forge import
 ```
 
+然后打包
+
 ```
-npm run make
+yarn run make
 ```
 
+打包完成后就可以在out文件夹里看到相应的包了
