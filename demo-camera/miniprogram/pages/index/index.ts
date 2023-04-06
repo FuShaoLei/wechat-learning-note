@@ -6,6 +6,7 @@ Page({
     this.ctx.takePhoto({
       quality: 'high',
       success: (res:any) => {
+        console.log(res.tempImagePath);
         this.setData({
           src: res.tempImagePath
         })

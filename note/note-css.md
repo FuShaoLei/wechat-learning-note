@@ -73,8 +73,8 @@ flex项目属性
 
 ## Grid布局
 
-```
-
+```css
+display: grid;
 ```
 
 
