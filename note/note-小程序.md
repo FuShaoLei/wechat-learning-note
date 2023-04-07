@@ -180,5 +180,65 @@ wx.navigateTo({url:'/pages/detail/index'});
   - 如果用户之前已经同意过授权，但是又自己主动把他关掉了，则会直接返回失败
 - 全部权限 请看 -> [Scope列表](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/authorize.html#scope-%E5%88%97%E8%A1%A8)
 
+## 拍照
 
+```typescript
+  onLoad() {
+    this.ctx = wx.createCameraContext();
+  },
+  takePhoto() {
+    this.ctx.takePhoto({
+      quality: 'high',
+      success: (res: any) => {
+        console.log(res.tempImagePath);
+        this.setData({
+          src: res.tempImagePath
+        });
+        this.data.src = res.tempImagePath;
+      }
+    });
+  }
+```
+
+## 上传文件（以上传图片为例子）
+
+服务端
+
+```java
+@PostMapping("/upload")
+public String upload(@RequestParam("imgFile") MultipartFile file,
+                     @RequestParam("imgName") String name) throws Exception {
+
+
+    name = name + System.currentTimeMillis();
+    File dir = new File("uploadFile");
+    if (!dir.exists()) {
+        dir.mkdirs();
+    }
+    file.transferTo(new File(dir.getAbsolutePath() + File.separator + name + ".png"));
+
+    return "you upload something" + name;
+}
+```
+
+小程序端
+
+```typescript
+uploadImg() {
+    console.log("要上传的链接是：" + this.data.src);
+    if (this.data.src) {
+        wx.uploadFile({
+            url: 'http://192.168.0.63:8088/upload',
+            filePath: this.data.src,
+            name: 'imgFile',
+            formData: {
+                'imgName': 'funny dog'
+            },
+            success(res) {
+                console.log(res);
+            }
+        });
+    }
+},
+```
 

@@ -13,7 +13,6 @@ Page({
   },
   // 事件处理函数
   bindViewTap() {
-   
     // 网络请求设置
     wx.request({
       url: 'https://v1.jinrishici.com/all.json',
@@ -25,8 +24,6 @@ Page({
         }
       }
     })
-
-
   },
   onLoad() {
     // @ts-ignore
@@ -59,5 +56,19 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
+  
+  requestGet(){
+    // 网络请求设置
+    wx.request({
+     url: 'https://v1.jinrishici.com/all.json',
+     method:'GET',
+     success(res){
+       console.log(res);
+       if(res){
+         console.log(res.data);
+       }
+     }
+   })
+ }
 })
