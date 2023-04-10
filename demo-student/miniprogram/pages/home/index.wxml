@@ -4,4 +4,6 @@
         <t-grid-item bindtap="handlerClickStudentItem" text="学生" icon="usergroup" />
         <t-grid-item text="作业" icon="view-module" />
     </t-grid>
+    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button>
+
 </view>
