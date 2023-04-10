@@ -1,0 +1,9 @@
+<view class="student-manager-main-container">
+
+<view class="search-container">
+    <t-search model:value="{{value}}" placeholder="搜索预设文案" />
+</view>
+<view class="student-card-container">
+<student-list></student-list>
+</view>
+</view>

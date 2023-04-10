@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "t-search": "tdesign-miniprogram/search/search",
+        "st-card": "../../components/student-card",
+        "student-list": "../../components/student-list"
+    },
+    "navigationBarTitleText": "1班"
+}

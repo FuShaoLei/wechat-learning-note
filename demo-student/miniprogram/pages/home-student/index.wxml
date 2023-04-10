@@ -1,0 +1,8 @@
+<view class="select-class-container">
+<view class="cell-group-main">
+    <t-cell-group theme="card">
+        <t-cell bindtap="handlerClickClass" title="1班" hover arrow/>
+        <t-cell title="16班" hover arrow/>
+    </t-cell-group>
+</view>
+</view>

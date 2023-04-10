@@ -4,7 +4,9 @@
         "pages/message/index",
         "pages/my/index",
         "pages/my-data/index",
-        "pages/message-detail/index"
+        "pages/message-detail/index",
+        "pages/home-student/index",
+        "pages/student-manager-main/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

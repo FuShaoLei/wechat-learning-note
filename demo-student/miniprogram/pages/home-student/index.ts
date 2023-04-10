@@ -1,4 +1,4 @@
-// pages/home/index.ts
+// pages/home-student/index.ts
 Page({
 
     /**
@@ -26,13 +26,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
-        this.getTabBar().init();
-        if (typeof this.getTabBar === 'function' &&
-            this.getTabBar()) {
-            this.getTabBar().setData({
-                active: 0
-            })
-        }
+
     },
 
     /**
@@ -69,7 +63,7 @@ Page({
     onShareAppMessage() {
 
     },
-    handlerClickStudentItem(){
-        wx.navigateTo({url:'/pages/home-student/index'});
+    handlerClickClass() {
+        wx.navigateTo({url:'/pages/student-manager-main/index'});
     }
 })

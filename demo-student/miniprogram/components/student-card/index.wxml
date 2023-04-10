@@ -1,0 +1,5 @@
+<view class="student-card-container">
+    <t-avatar>任盈盈</t-avatar>
+    <text class="student-number">20180512</text>
+    <text class="student-name">任盈盈</text>
+</view>
