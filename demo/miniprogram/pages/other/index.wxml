@@ -1,5 +1,4 @@
 <!--pages/other/index.wxml-->
 <view class="test-block">
-<text>此页面专用于测试自定义component</text>
-<goods-list></goods-list>
+<good-card class="card-block"></good-card>
 </view>

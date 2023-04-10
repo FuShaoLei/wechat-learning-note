@@ -19,7 +19,7 @@
         "custom": true,
         "color": "#666666",
         "selectedColor": "#FF5F15",
-        "backgroundColor": "#ffffff",
+        "backgroundColor": "#333",
         "borderStyle": "black",
         "list": [
             {

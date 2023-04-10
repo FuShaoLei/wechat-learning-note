@@ -1,0 +1,15 @@
+/* pages/my/index.wxss */
+.user-msg-container{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 30rpx;
+    margin: 40rpx;
+    .nickname {
+        font-size: 35rpx;
+        margin-left: 30rpx;
+    }
+}
+.user-duty-container{
+	margin: 40rpx;
+}

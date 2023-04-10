@@ -1,5 +1,8 @@
 <!--index.wxml-->
 <view>
 <button class="item_btn" bindtap="requestGet">GET</button>
+<button class="item_btn" bindtap="downloadAndOpenPdf">下载并打开PDF</button>
+<button class="item_btn" bindtap="downloadAndOpenPdf">下载并打开Word</button>
+<button class="item_btn" bindtap="downloadAndOpenPdf">下载并打开PPT</button>
   
 </view>

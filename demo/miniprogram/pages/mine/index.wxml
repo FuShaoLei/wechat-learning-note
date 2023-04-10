@@ -3,7 +3,7 @@
     <view class="avator-block" bindtap="clickAvator">
         <view class="avator__img">
             <t-avatar image="{{ava}}" />
-        </view>
+        </view> 
         <view class="avator__name">
             <text class="my__name">微信用户</text>
         </view>

@@ -1,0 +1,25 @@
+.msg-card-container {
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 30rpx;
+}
+.msg-card-main{
+	display: flex;
+	align-items: center;
+
+	.msg-text-container {
+		display: flex;
+		margin-left: 30rpx;
+		flex-direction: column;
+		.msg-nickname{
+			font-size: 35rpx;
+		}
+		.msg-text{
+			font-size: 28rpx;
+			margin-top: 5rpx;
+			color: #d6d6d6;
+		}
+	}
+}

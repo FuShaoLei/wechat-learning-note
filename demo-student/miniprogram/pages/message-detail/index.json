@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "t-input": "tdesign-miniprogram/input/input",
+        "t-avatar": "tdesign-miniprogram/avatar/avatar"
+    },
+	"navigationBarTitleText": "萧峰"
+}

@@ -25,17 +25,20 @@ Page({
   },
   uploadImg() {
     console.log("要上传的链接是：" + this.data.src);
-    wx.uploadFile({
-      url: 'http://192.168.0.63:8088/upload',
-      filePath: this.data.src,
-      name:'imgFile',
-      formData:{
-        'imgName':'funny dog'
-      },
-      success(res) {
-        console.log(res);
-      }
-    });
+    if (this.data.src) {
+      wx.uploadFile({
+        url: 'http://192.168.0.63:8088/upload',
+        filePath: this.data.src,
+        name: 'imgFile',
+        formData: {
+          'imgName': 'funny dog'
+        },
+        success(res) {
+          console.log(res);
+        }
+      });
+    }
+
   },
   // 测试
   testSpringBoot() {

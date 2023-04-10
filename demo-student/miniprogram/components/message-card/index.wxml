@@ -1,0 +1,11 @@
+<!--components/message-card/index.wxml-->
+<view class="msg-card-container" bindtap="hanlderClickMsgItem">
+	<view class="msg-card-main">
+		<t-avatar>萧</t-avatar>
+		<view class="msg-text-container">
+			<text class="msg-nickname">萧风</text>
+			<text class="msg-text">你好啊</text>
+		</view>
+	</view>
+	<t-badge class="msg-card-badge" count="1" />
+</view>

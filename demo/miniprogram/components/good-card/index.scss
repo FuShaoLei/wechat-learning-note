@@ -2,21 +2,20 @@
 .goods-card {
     box-sizing: border-box;
     font-size: 24rpx;
-    padding: 18rpx 18rpx;
     background-color: #fff;
-    border-radius: 0 0 16rpx 16rpx;
-    border-bottom: none;
-    width: 342rpx
+    border-radius: 16rpx;
+    width: 342rpx;
+    margin-bottom: 20rpx;
+    margin-top: 20rpx;
 }
-.img__main{
-    width: 340rpx;
-    height: 340rpx;
-}
-.img__my{
+
+.img__my {
     width: 338rpx;
     height: 338rpx;
+    border-radius: 16rpx 0rpx;
 }
-.text__main{
+
+.text__main {
     margin-top: 20rpx;
 }
 
@@ -30,4 +29,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.card-text-block {
+    padding: 20rpx;
 }

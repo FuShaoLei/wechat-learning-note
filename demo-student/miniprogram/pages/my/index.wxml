@@ -1,0 +1,33 @@
+<view class="user-container">
+
+	<!--用户-->
+	<view class="user-msg-container" bindtap="handlerUserClick">
+		<t-avatar>任</t-avatar>
+		<text class="nickname">任我行</text>
+	</view>
+	<!--职位-->
+	<view class="user-duty-container">
+		<t-collapse expandMutex expand-icon="{{false}}">
+			<t-collapse-panel header="政教处主任" value="{{1}}">
+				<t-cell-group>
+					<t-cell title="时间" note="2015/09 ~ 至今" />
+				</t-cell-group>
+			</t-collapse-panel>
+			<t-collapse-panel header="数学老师" value="{{0}}">
+				<t-cell-group>
+					<t-cell title="年级" note="七年级" />
+					<t-cell title="班级" note="1班" />
+					<t-cell title="时间" note="2017/09 ~ 2018/06" />
+				</t-cell-group>
+			</t-collapse-panel>
+			<t-collapse-panel header="体育老师" value="{{2}}">
+				<t-cell-group>
+					<t-cell title="年级" note="七年级" />
+					<t-cell title="班级" note="3班" />
+					<t-cell title="时间" note="2017/09 ~ 2018/06" />
+				</t-cell-group>
+			</t-collapse-panel>
+		</t-collapse>
+	</view>
+
+</view>

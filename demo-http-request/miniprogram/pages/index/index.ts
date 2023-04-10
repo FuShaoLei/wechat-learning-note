@@ -16,10 +16,10 @@ Page({
     // 网络请求设置
     wx.request({
       url: 'https://v1.jinrishici.com/all.json',
-      method:'GET',
-      success(res){
+      method: 'GET',
+      success(res) {
         console.log(res);
-        if(res){
+        if (res) {
           console.log(res.data);
         }
       }
@@ -57,18 +57,33 @@ Page({
       hasUserInfo: true
     })
   },
-  
-  requestGet(){
+
+  requestGet() {
     // 网络请求设置
     wx.request({
-     url: 'https://v1.jinrishici.com/all.json',
-     method:'GET',
-     success(res){
-       console.log(res);
-       if(res){
-         console.log(res.data);
-       }
-     }
-   })
- }
+      url: 'https://v1.jinrishici.com/all.json',
+      method: 'GET',
+      success(res) {
+        console.log(res);
+        if (res) {
+          console.log(res.data);
+        }
+      }
+    })
+  },
+  downloadAndOpenPdf() {
+    wx.downloadFile({
+      url: 'http://192.168.0.63:8088/downloadFile',
+      success(res) {
+        const filePath = res.tempFilePath;
+        wx.openDocument({
+          filePath: filePath,
+          success(res) {
+            console.log(res + "打开文档成功");
+          }
+        })
+
+      }
+    });
+  }
 })

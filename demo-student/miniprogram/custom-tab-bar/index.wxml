@@ -1,0 +1,8 @@
+<t-tab-bar 
+    value="{{active}}" 
+    bindchange="onItemChange" 
+    split="{{false}}">
+    <t-tab-bar-item wx:for="{{items}}" icon="{{item.icon}}" data-path="{{item.url}}" wx:key="{{item.key}}">
+    {{item.text}}
+    </t-tab-bar-item>
+</t-tab-bar>
