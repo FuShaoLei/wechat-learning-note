@@ -1,4 +1,6 @@
 <!--pages/message/index.wxml-->
 <view class="chat-container">
-<msg-card></msg-card>
+    <view class="chat-list-main">
+        <msg-card></msg-card>
+    </view>
 </view>
