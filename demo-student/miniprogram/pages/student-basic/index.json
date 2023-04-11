@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+		"t-avatar": "tdesign-miniprogram/avatar/avatar",
+		"ec-canvas": "../../components/ec-canvas/ec-canvas"
+	
+	},
+	"navigationBarTitleText": "任盈盈"
+}

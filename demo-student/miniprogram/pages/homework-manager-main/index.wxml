@@ -1,0 +1,7 @@
+<view class="homework-manager-container">
+
+	<view class="btn-add-homework">
+		<t-button bindtap="handlerClickAddHomeWork" theme="primary" size="large" block>添加作业</t-button>
+	</view>
+
+</view>

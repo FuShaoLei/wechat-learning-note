@@ -1,0 +1,41 @@
+<view class="homework-add-container">
+<view class="content-area-container">
+	<t-textarea t-class="textarea-eclass" placeholder="请输入文字" disableDefaultPadding="{{true}}" />
+    <block wx:if="{{sPath}}">
+        <t-image src="{{sPath}}"></t-image>
+    </block>
+	<view class="add-file-btn" bindtap="clickAddFile">
+	    <t-icon name="add" size="55rpx" data-name="add" />
+		<text class="btn-file-text">拍照/选择文件</text>
+	</view>
+</view>
+<view class="action-btn-container">
+    <t-cell-group >
+        <t-cell 
+			title="选择结束时间" 
+			bindtap="showPicker" 
+			data-mode="date"
+			note="{{dateText || ''}}"
+			hover arrow />
+        <t-cell title="选择班级" note="1班，2班" hover  arrow />
+    </t-cell-group>
+</view>
+
+
+<t-action-sheet show-cancel="{{false}}" id="t-action-sheet" bind:selected="handleActionSheetSelected" />
+
+<t-date-time-picker
+  title="选择日期"
+  visible="{{dateVisible}}"
+  mode="date"
+  defaultValue="{{date}}"
+  format="YYYY/MM/DD"
+  bindchange="onConfirm"
+  bindpick="onColumnChange"
+  bindcancel="hidePicker"
+  start="{{start}}"
+  end="{{end}}"
+/>
+
+
+</view>

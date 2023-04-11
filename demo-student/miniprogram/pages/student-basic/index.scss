@@ -1,0 +1,45 @@
+.sutdent-card-container {
+	margin: 30rpx 0rpx;
+	background-color: #fff;
+	padding: 30rpx;
+	display: flex;
+	align-items: center;
+}
+
+.student-card-right-conatainer {
+	margin-left: 35rpx;
+	display: flex;
+	flex-direction: column;
+
+	.card-name {
+		font-size: 33rpx;
+	}
+
+	.card-class {
+		margin-left: 15rpx;
+		background-color: rgb(110, 166, 250);
+		font-size: 23rpx;
+		padding: 10rpx 20rpx;
+		border-radius: 30rpx;
+		color: #fff;
+	}
+
+	.card-number {
+		margin-top: 15rpx;
+		font-size: 32rpx;
+	}
+}
+
+.echarts-radar-container{
+	height: 600rpx;
+	padding: 30rpx;
+	width: 100%;
+	background-color: #fff;
+}
+
+.echarts-line-container{
+	height: 800rpx;
+	padding: 30rpx;
+	width: 100%;
+	background-color: #fff;
+}

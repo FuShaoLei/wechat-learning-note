@@ -1,0 +1,19 @@
+<view class="student-basic-container">
+	<view class="sutdent-card-container">
+		<t-avatar>任盈盈</t-avatar>
+		<view class="student-card-right-conatainer">
+			<view class="card-name-basic">
+				<text class="card-name">任盈盈</text>
+				<text class="card-class">1班</text>
+			</view>
+			<!--这应该是一个tag	-->
+			<text class="card-number">201703125</text>
+		</view>
+	</view>
+	<view class="echarts-radar-container">
+	    <ec-canvas id="mychart-dom-radar-bar" canvas-id="mychart-radar" ec="{{ ecRadar }}"></ec-canvas>
+	</view>
+	<view class="echarts-line-container">
+	    <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ecLine }}"></ec-canvas>
+	</view>
+</view>

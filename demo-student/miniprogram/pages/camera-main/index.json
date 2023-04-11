@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "t-toast": "tdesign-miniprogram/toast/toast"
+    },
+    "navigationBarTitleText": "拍照"
+}

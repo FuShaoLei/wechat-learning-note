@@ -1,0 +1,9 @@
+<view class="camera-main-container">
+	<camera style="width: 100%; height: 400px;" device-position="back" flash="off" binderror="error"></camera>
+
+<view class="btn-take-photo-container">
+<button bindtap="takePhoto">拍摄</button>
+<button bindtap="nextStep">下一步</button>
+</view>
+<t-toast id="t-toast" />
+</view>

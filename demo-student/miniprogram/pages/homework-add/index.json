@@ -1,0 +1,12 @@
+{
+    "usingComponents": {
+        "t-textarea": "tdesign-miniprogram/textarea/textarea",
+        "t-icon": "tdesign-miniprogram/icon/icon",
+        "t-cell-group": "tdesign-miniprogram/cell-group/cell-group",
+        "t-cell": "tdesign-miniprogram/cell/cell",
+        "t-action-sheet": "tdesign-miniprogram/action-sheet/action-sheet",
+        "t-date-time-picker": "tdesign-miniprogram/date-time-picker/date-time-picker",
+        "t-image": "tdesign-miniprogram/image/image"
+    },
+    "navigationBarTitleText": "布置作业"
+}

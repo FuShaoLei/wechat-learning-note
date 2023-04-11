@@ -6,7 +6,11 @@
         "pages/my-data/index",
         "pages/message-detail/index",
         "pages/home-student/index",
-        "pages/student-manager-main/index"
+        "pages/student-manager-main/index",
+        "pages/student-basic/index",
+        "pages/homework-manager-main/index",
+        "pages/homework-add/index",
+        "pages/camera-main/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
