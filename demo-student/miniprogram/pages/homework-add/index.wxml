@@ -1,13 +1,16 @@
 <view class="homework-add-container">
 <view class="content-area-container">
 	<t-textarea t-class="textarea-eclass" placeholder="请输入文字" disableDefaultPadding="{{true}}" />
-    <block wx:if="{{sPath}}">
-        <t-image src="{{sPath}}"></t-image>
-    </block>
-	<view class="add-file-btn" bindtap="clickAddFile">
-	    <t-icon name="add" size="55rpx" data-name="add" />
-		<text class="btn-file-text">拍照/选择文件</text>
-	</view>
+
+
+<view class="selected-img-container">
+    <img-list 
+        imgUrlArray="{{imgArrays}}"
+        bind:onClickAddFile="clickAddFile"
+        bind:onClickListItem="clickImgItem"
+        bind:onClickListItemClose="clickImgItemClose"></img-list>
+</view>
+
 </view>
 <view class="action-btn-container">
     <t-cell-group >

@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "img-card":"../../components/image-card",
+        "t-icon": "tdesign-miniprogram/icon/icon"
+    }
+}

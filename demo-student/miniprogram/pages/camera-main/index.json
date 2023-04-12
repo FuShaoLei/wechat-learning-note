@@ -1,6 +1,7 @@
 {
     "usingComponents": {
-        "t-toast": "tdesign-miniprogram/toast/toast"
+        "t-toast": "tdesign-miniprogram/toast/toast",
+        "image-card":"../../components/image-card"
     },
     "navigationBarTitleText": "拍照"
 }

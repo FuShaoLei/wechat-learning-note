@@ -1,0 +1,21 @@
+.select-img-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.add-file-btn {
+	width: 200rpx;
+	height: 200rpx;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background-color: #eceaea;
+
+	.btn-file-text {
+		margin-top: 20rpx;
+		font-size: 26rpx;
+	}
+}
+.item {
+    margin-bottom: 10rpx;
+}

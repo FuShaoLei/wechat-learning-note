@@ -1,0 +1,15 @@
+<view class="select-img-container">
+    <view class="item" wx:for="{{imgUrlArray}}">
+        <img-card
+            data-index="{{index}}"
+            bind:handlerImgClick="onClickItemImg"
+            bind:handlerImgCloseBtn="onClickItemClose"
+            imgUrl="{{item}}">
+        </img-card>
+    </view>
+
+    <view class="item add-file-btn" bindtap="onClickAddFile">
+	    <t-icon name="add" size="55rpx" data-name="add" />
+		<text class="btn-file-text">拍照/选择文件</text>
+	</view>
+</view>

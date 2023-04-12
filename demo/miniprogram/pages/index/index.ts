@@ -47,7 +47,8 @@ Page({
         console.log("you click card item !!!!");
         wx.navigateTo({url:'/pages/detail/index'});
     },
-    onClickItem2Cart2(){
+    onClickItem2Cart2(e:any){
+        console.log(e);
         console.log("you click cart 2 shopping cart !! wtf");
         Toast({
           context: this,

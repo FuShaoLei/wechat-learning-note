@@ -6,7 +6,8 @@
         "t-cell": "tdesign-miniprogram/cell/cell",
         "t-action-sheet": "tdesign-miniprogram/action-sheet/action-sheet",
         "t-date-time-picker": "tdesign-miniprogram/date-time-picker/date-time-picker",
-        "t-image": "tdesign-miniprogram/image/image"
+        "t-image": "tdesign-miniprogram/image/image",
+        "img-list":"../../components/select-img-list"
     },
     "navigationBarTitleText": "布置作业"
 }

@@ -2,3 +2,52 @@
 // 	height: 100vh;
 // 	background-color: #333;
 // }
+
+$bottomHeight: 200rpx;
+
+page {
+	height: 100%;
+	background-color: #333;
+}
+
+.circle-btn {
+	width: 130rpx;
+	height: 130rpx;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	bottom: $bottomHeight - 20rpx;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.camera-main-container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	.camera-content-container{
+		height: 100%;
+		width: 100%;
+		camera {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.btn-take-photo-container{
+		flex-basis: $bottomHeight;
+	}
+}
+.btn-take-photo-container {
+	display: flex;
+	padding: 30rpx;
+	align-items: flex-end;
+	.btn-next {
+		height: 45rpx;
+		width: 100rpx;
+		font-size: 30rpx;
+		margin-top: 20rpx;
+		text-align: center;
+		border-radius: 35rpx;
+		padding: 15rpx 25rpx;
+		background-color: burlywood;
+	}
+}
