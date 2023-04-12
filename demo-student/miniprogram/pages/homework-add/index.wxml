@@ -20,10 +20,21 @@
 			data-mode="date"
 			note="{{dateText || ''}}"
 			hover arrow />
-        <t-cell title="选择班级" note="1班，2班" hover  arrow />
+        <t-cell bindtap="showClassPick" title="选择班级" note="1班，2班" hover  arrow />
     </t-cell-group>
 </view>
 
+
+<!--弹出框 ， 多选框-->
+<t-popup close-btn="{{}}" close-on-overlay-click="{{true}}" visible="{{popVisible}}" bind:visible-change="onVisibleChange" placement="bottom">
+  <view class="block">
+    <view class="header">
+      <view class="btn btn--cancel" aria-role="button">取消</view>
+      <view class="title">标题文字</view>
+      <view class="btn btn--confirm" aria-role="button">确定</view>
+    </view>
+  </view>
+</t-popup>
 
 <t-action-sheet show-cancel="{{false}}" id="t-action-sheet" bind:selected="handleActionSheetSelected" />
 
