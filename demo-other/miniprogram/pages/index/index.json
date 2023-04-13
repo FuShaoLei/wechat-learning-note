@@ -16,7 +16,18 @@
     "t-progress": "tdesign-miniprogram/progress/progress",
     "t-slider": "tdesign-miniprogram/slider/slider",
     "t-steps": "tdesign-miniprogram/steps/steps",
-    "t-step-item": "tdesign-miniprogram/step-item/step-item"
+    "t-step-item": "tdesign-miniprogram/step-item/step-item",
+
+
+    "t-checkbox-group": "tdesign-miniprogram/checkbox-group/checkbox-group",
+    "t-checkbox": "tdesign-miniprogram/checkbox/checkbox",
+    "t-icon": "tdesign-miniprogram/icon/icon",
+
+
+    "t-grid": "tdesign-miniprogram/grid/grid",
+    "t-grid-item": "tdesign-miniprogram/grid-item/grid-item",
+    "t-image": "tdesign-miniprogram/image/image"
+
 
   }
 }

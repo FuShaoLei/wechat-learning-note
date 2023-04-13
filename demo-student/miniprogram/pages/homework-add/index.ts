@@ -21,13 +21,14 @@ Page({
         selectedFile: [],
         maxSelectCount: 5,
         cur: {},
-    position: [
-      { value: 'top', text: '顶部弹出' },
-      { value: 'left', text: '左侧弹出' },
-      { value: 'center', text: '中间弹出' },
-      { value: 'bottom', text: '底部弹出' },
-      { value: 'right', text: '右侧弹出' },
-    ],
+        position: [
+            { value: 'top', text: '顶部弹出' },
+            { value: 'left', text: '左侧弹出' },
+            { value: 'center', text: '中间弹出' },
+            { value: 'bottom', text: '底部弹出' },
+            { value: 'right', text: '右侧弹出' },
+        ],
+        imgArrays: ["https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg", "https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg", "https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg"]
     },
     /**
      * 获取当前日期，主要用于选择结束时间
@@ -196,21 +197,15 @@ Page({
         this.setData({ imgArrays: imgItemArray });
 
     },
-    showClassPick(e:any) {
+    showClassPick(e: any) {
         const { item } = e.currentTarget.dataset;
-  
-        this.setData(
-          {
-            cur: item,
-          },
-          () => {
-            this.setData({ popVisible: true });
-          },
-        );
-      },
-      onVisibleChange(e:any){
+
+        this.setData({cur: item,},
+            () => {this.setData({ popVisible: true });},);
+    },
+    onVisibleChange(e: any) {
         this.setData({
             visible: e.detail.visible,
-          });
-      }
+        });
+    }
 })

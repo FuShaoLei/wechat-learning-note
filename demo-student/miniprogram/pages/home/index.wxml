@@ -1,8 +1,8 @@
 <view class="home-container">
 
     <t-grid class="grid-container" column="{{2}}" gutter="{{12}}">
-        <t-grid-item bindtap="handlerClickStudentItem" text="学生" icon="usergroup" />
-        <t-grid-item bindtap="handlerClickHomeworkItem" text="作业" icon="view-module" />
+        <t-grid-item external-classes="t-grid-item-class" bindtap="handlerClickStudentItem" text="学生" icon="usergroup" />
+        <t-grid-item external-classes="t-grid-item-class" bindtap="handlerClickHomeworkItem" text="作业" icon="view-module" />
     </t-grid>
     <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button>
 

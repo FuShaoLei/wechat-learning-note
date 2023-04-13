@@ -3,6 +3,9 @@ import Message from 'tdesign-miniprogram/message/index';
 
 
 Page({
+  options: {
+    styleIsolation: 'apply-shared',
+  },
   data: {
     isLoading: true,
     showTextAndTitle: false,
@@ -40,7 +43,9 @@ Page({
     },
     visible: false,
     note: '',
-    activeValues: [0]
+    activeValues: [0],
+    value: [0, 1],
+    value1: [0, 1],
   },
   onLoad() {
     setTimeout(() => {
@@ -116,7 +121,13 @@ Page({
   handleFoldChange(e: any) {
     this.setData({ activeValues: e.detail.value });
   },
-  onFirstChange(e:any){
+  onFirstChange(e: any) {
     this.setData({ first: e.detail.current });
-  }
+  },
+  onChange0(e:any) {
+    this.setData({ value: e.detail.value });
+  },
+  onChange1(e:any) {
+    this.setData({ value1: e.detail.value });
+  },
 })

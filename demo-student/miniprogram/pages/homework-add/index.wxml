@@ -3,13 +3,13 @@
 	<t-textarea t-class="textarea-eclass" placeholder="请输入文字" disableDefaultPadding="{{true}}" />
 
 
-<view class="selected-img-container">
-    <img-list 
-        imgUrlArray="{{imgArrays}}"
-        bind:onClickAddFile="clickAddFile"
-        bind:onClickListItem="clickImgItem"
-        bind:onClickListItemClose="clickImgItemClose"></img-list>
-</view>
+  <view class="selected-img-container">
+      <img-list 
+          imgUrlArray="{{imgArrays}}"
+          bind:onClickAddFile="clickAddFile"
+          bind:onClickListItem="clickImgItem"
+          bind:onClickListItemClose="clickImgItemClose"></img-list>
+  </view>
 
 </view>
 <view class="action-btn-container">

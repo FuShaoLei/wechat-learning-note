@@ -5,32 +5,38 @@
   </view>
 </block>
 
+
+
+
+
+<view class="timg-container">
+<view class="item a">
+<image src="https://tdesign.gtimg.com/miniprogram/images/example2.png"></image>
+</view>
+<view class="item b">
+<t-image src="https://tdesign.gtimg.com/miniprogram/images/example2.png"></t-image>
+</view>
+<view class="item c">
+  <t-image src="https://tdesign.gtimg.com/miniprogram/images/example2.png"></t-image>
+</view>
+<view class="item b">
+<t-image src="https://tdesign.gtimg.com/miniprogram/images/example2.png"></t-image>
+</view>
+ </view>
+
+
 <view class="container__block" wx:if="{{!isLoading}}">
 
-<!--对话框-->
-  <t-button 
-    theme="primary" 
-    bindtap="showDialog" 
-    data-key="showTextAndTitle"
-    class="test__btn"
-    size="large">
-  对话框
+  <!--对话框-->
+  <t-button theme="primary" bindtap="showDialog" data-key="showTextAndTitle" class="test__btn" size="large">
+    对话框
   </t-button>
 
-  <t-dialog 
-    visible="{{showTextAndTitle}}" 
-    title="你好" 
-    content="你好你好你好你好你好你好你好你好你好" 
-    confirm-btn="{{ confirmBtn }}" 
-    bind:confirm="closeDialog" />
+  <t-dialog visible="{{showTextAndTitle}}" title="你好" content="你好你好你好你好你好你好你好你好你好" confirm-btn="{{ confirmBtn }}" bind:confirm="closeDialog" />
 
   <!--动作面板-->
-  <t-button 
-    theme="primary" 
-    class="test__btn"
-    bindtap="handleAction"
-    size="large">
-  动作面板
+  <t-button theme="primary" class="test__btn" bindtap="handleAction" size="large">
+    动作面板
   </t-button>
 
   <t-action-sheet id="t-action-sheet" bind:selected="handleSelected" />
@@ -40,11 +46,7 @@
     <t-dropdown-item options="{{sorter.options}}" default-value="{{sorter.value}}" />
   </t-dropdown-menu>
   <!--消息通知-->
-  <t-button 
-    theme="primary" 
-    class="test__btn"
-    bindtap="handleMessageNotification"
-    size="large">
+  <t-button theme="primary" class="test__btn" bindtap="handleMessageNotification" size="large">
     消息通知
   </t-button>
   <t-message id="t-message" />
@@ -75,8 +77,8 @@
   <!--进度条-->
   <view class="progress__block">
     <t-progress percentage="80" class="progress__item" />
-    <t-progress theme="plump" percentage="80" class="progress__item"  />
-    <t-progress theme="circle" percentage="30" class="progress__item"  />
+    <t-progress theme="plump" percentage="80" class="progress__item" />
+    <t-progress theme="circle" percentage="30" class="progress__item" />
   </view>
   <!--滑动选择器-->
   <t-slider default-value="{{23}}" />
@@ -88,12 +90,36 @@
         return '当前步骤'; return '未完成';
     }
   </wxs>
-  
+
   <view class="block">
     <t-steps current="{{first}}" bind:change="onFirstChange">
       <t-step-item wx:for="{{4}}" wx:key="index" title="{{_.getText(first, index)}}" content="辅助信息" />
     </t-steps>
   </view>
+
+
+
+
+  <wxs module="_">
+    module.exports.contain = function (arr, key) { return arr.indexOf(key) > -1 } 
+  </wxs>
+
+  <t-checkbox-group value="{{value}}" bind:change="onChange0">
+    <view wx:for="{{3}}" wx:key="index" class="card {{_.contain(value, index) ? 'card--active' : value.indexOf(index)}}">
+      <t-icon wx:if="{{_.contain(value, index)}}" name="check" t-class="card__icon" ariaHidden="{{true}}" />
+      <t-checkbox value="{{index}}" label="多选" content="描述信息描述信息描述信息描述信息描述信息" icon="none" borderless />
+    </view>
+  </t-checkbox-group>
+
+  <view class="demo-desc" style="margin: 48rpx 32rpx 32rpx">横向卡片多选框</view>
+
+  <t-checkbox-group t-class="horizontal-box" value="{{value1}}" bind:change="onChange1">
+    <view wx:for="{{3}}" wx:key="index" class="card {{_.contain(value1, index) ? 'card--active' : ''}}">
+      <t-icon wx:if="{{_.contain(value1, index)}}" name="check" t-class="card__icon" ariaHidden="{{true}}" />
+      <t-checkbox value="{{index}}" label="多选" icon="none" borderless />
+    </view>
+  </t-checkbox-group>
+
 
 
 </view>

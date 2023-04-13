@@ -16,9 +16,119 @@
 .test__btn {
   margin-bottom: 30rpx;
 }
-.progress__block{
+
+.progress__block {
   padding: 30rpx;
 }
-.progress__item{
+
+.progress__item {
   margin-bottom: 30rpx;
+}
+
+
+.card {
+  position: relative;
+  margin: 32rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 3rpx solid #fff;
+}
+
+.card--active {
+  border-color: #0052d9;
+}
+
+.card--active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  border: 14px solid #0052d9;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+}
+
+.card__icon {
+  color: #fff;
+  position: absolute;
+  left: 1.5px;
+  top: 1.5px;
+  z-index: 1;
+}
+
+/* 横向布局 */
+.horizontal-box {
+  width: calc(100% - 64rpx);
+  display: flex;
+  align-items: center;
+  margin: 32rpx;
+}
+
+.horizontal-box .card {
+  flex: 1;
+  margin: 0;
+}
+
+.horizontal-box .card+.card {
+  margin-left: 24rpx;
+}
+
+.horizontal-box .card::after {
+  border-width: 12px;
+}
+
+.horizontal-box .card__icon {
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+// 测试该死的t-image
+
+
+.timg-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  .a {
+    background-color: antiquewhite;
+  }
+
+  .b {
+    background-color: brown;
+  }
+
+  .c {
+    background-color: cornflowerblue;
+  }
+  .item {
+    text-align: center;
+    aspect-ratio: 1/1;
+    margin: 10rpx;
+    border-radius: 10rpx;
+
+  }
+}
+image{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+t-image{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.stu-card__img{
+  display: block;
+  border-radius: 10rpx;
+  width: 100%;
+  height: 100%;
 }
