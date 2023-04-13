@@ -13,3 +13,28 @@
 .block{
     height: 300rpx;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// 选择班级弹窗
+
+.pop-action-container{
+	margin: 40rpx 30rpx;
+	display: flex;
+	justify-content: space-between;
+	.pop-title {
+		font-weight: bolder;
+	}
+}
+.pop-list-main {
+	margin: 30rpx 0rpx;
+}

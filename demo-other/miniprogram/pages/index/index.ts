@@ -130,4 +130,14 @@ Page({
   onChange1(e:any) {
     this.setData({ value1: e.detail.value });
   },
+  chooseFile() {
+    wx.chooseMessageFile({
+      count: 2, // 可选择文件的数量
+      type: 'all', // 可选择的文件类型，可以是 'image', 'video', 'audio' 或 'file'
+      success(res) {
+        console.log(res.tempFiles);
+      }
+    })
+    
+  }
 })

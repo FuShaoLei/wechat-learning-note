@@ -23,7 +23,7 @@
 
 
 
-
+<!--选择结束时间-弹窗-->
 <view class="action-btn-container">
     <t-cell-group >
         <t-cell 
@@ -38,15 +38,24 @@
 
 
 <!--弹出框 ， 多选框-->
-<t-popup close-btn="{{}}" close-on-overlay-click="{{true}}" visible="{{popVisible}}" bind:visible-change="onVisibleChange" placement="bottom">
-  <view class="block">
-    <view class="header">
-      <view class="btn btn--cancel" aria-role="button">取消</view>
-      <view class="title">标题文字</view>
-      <view class="btn btn--confirm" aria-role="button">确定</view>
-    </view>
+<t-popup  bind:visible-change="onPopVisibleChange" visible="{{popVisible}}" placement="bottom">
+<view class="popup-block-container">
+
+  <view class="pop-action-container">
+    <text class="pop-cancel">取消</text>
+    <text class="pop-title">选择班级</text>
+    <text class="pop-confirm">确定</text>
   </view>
+	<view class="pop-list-main">
+		<t-checkbox-group
+      options="{{options}}"
+      defaultValue="{{checkAllValues}}"
+      bind:change="onCheckAllChange">
+</t-checkbox-group>
+	</view>
+</view>
 </t-popup>
+
 
 <t-action-sheet show-cancel="{{false}}" id="t-action-sheet" bind:selected="handleActionSheetSelected" />
 
@@ -60,8 +69,7 @@
   bindpick="onColumnChange"
   bindcancel="hidePicker"
   start="{{start}}"
-  end="{{end}}"
-/>
+  end="{{end}}"/>
 
 
 </view>

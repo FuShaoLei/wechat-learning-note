@@ -32,13 +32,12 @@ Page({
         selectedFile: [],
         maxSelectCount: 5,
         cur: {},
-        position: [
-            { value: 'top', text: '顶部弹出' },
-            { value: 'left', text: '左侧弹出' },
-            { value: 'center', text: '中间弹出' },
-            { value: 'bottom', text: '底部弹出' },
-            { value: 'right', text: '右侧弹出' },
-        ]
+        options: [
+            { label: '全选', checkAll: true },
+            { label: '1班', value: 1 },
+            { label: '2班', value: 2 },
+          ],
+          checkAllValues: [1, 2],
     },
     /**
      * 获取当前日期，主要用于选择结束时间
@@ -207,12 +206,6 @@ Page({
         this.setData({ imgArrays: imgItemArray });
 
     },
-    showClassPick(e: any) {
-        const { item } = e.currentTarget.dataset;
-
-        this.setData({ cur: item, },
-            () => { this.setData({ popVisible: true }); });
-    },
     onVisibleChange(e: any) {
         this.setData({
             visible: e.detail.visible,
@@ -235,5 +228,29 @@ Page({
         const index = e.currentTarget.dataset.index;
         fileItemArray.splice(index,1);
         this.setData({fileItems:fileItemArray});
-    }
+    },
+
+    // 选择班级弹出框处理
+
+    showClassPick(e: any) {
+        console.log("you click showClassPick");
+        console.log(e);
+
+        const { item } = e.currentTarget.dataset;
+
+        this.setData({ cur: item, }, () => { this.setData({ popVisible: true }); });
+    },
+
+    onPopVisibleChange(e:any) {
+        console.log("you click onPopVisibleChange");
+        console.log(e);
+        this.setData({popVisible:e.detail.visible})
+    },
+    onCheckAllChange(event:any) {
+        console.log('checkbox', event.detail.value);
+        this.setData({
+          checkAllValues: event.detail,
+        });
+      },
+
 })

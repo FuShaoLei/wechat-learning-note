@@ -25,6 +25,9 @@
  </view>
 
 
+ <t-button bindtap="chooseFile">选择文件</t-button>
+
+
 <view class="container__block" wx:if="{{!isLoading}}">
 
   <!--对话框-->
