@@ -1,7 +1,12 @@
 <view class="image-container" bindtap="onClickItem">
     <view class="content-container">
-        <t-image class="image-main" src="https://tdesign.gtimg.com/miniprogram/images/example2.png" error="slot">
+        <t-image t-class="t-img" class="image-main" src="{{imgUrl}}" error="slot">
             <text class="error-text" slot="error">加载失败</text>
         </t-image>
     </view>
+
+    <view class="close-btn-container" catchtap="onClickCloseBtn">
+        <t-icon name="close" size="35rpx" data-name="close" />
+    </view>
+
 </view>

@@ -1,8 +1,11 @@
 <view class="select-img-container">
     <view class="item" wx:for="{{imgUrlArray}}">
-     
-            <t-image src="https://tdesign.gtimg.com/miniprogram/images/example2.png"></t-image>
-        
+        <img-card
+            data-index="{{index}}"
+            bind:handlerImgClick="onClickItemImg"
+            bind:handlerImgCloseBtn="onClickItemClose"
+            imgUrl="{{item}}">
+        </img-card>
     </view>
 
     <view class="item add-file-btn" bindtap="onClickAddFile">

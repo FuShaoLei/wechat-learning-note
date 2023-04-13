@@ -27,8 +27,7 @@ Page({
             { value: 'center', text: '中间弹出' },
             { value: 'bottom', text: '底部弹出' },
             { value: 'right', text: '右侧弹出' },
-        ],
-        imgArrays: ["https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg", "https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg", "https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg"]
+        ]
     },
     /**
      * 获取当前日期，主要用于选择结束时间

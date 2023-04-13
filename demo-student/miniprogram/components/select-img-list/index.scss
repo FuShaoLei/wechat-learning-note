@@ -4,12 +4,7 @@
 	.item {
 		aspect-ratio: 1/1;
 		margin: 10rpx;
-		border-radius: 10rpx;
-		image {
-			display: block;
-			width: 100%;
-			height: 100%;
-		}
+		border-radius: 12rpx;
 	}
 }
 
@@ -29,3 +24,14 @@
 
 
 // 图片布局
+
+
+.item-main{
+	display: block;
+	width: 100%;
+	height: 100%;
+	image {	
+		width: 100%;
+		height: 100%;
+	}
+}
