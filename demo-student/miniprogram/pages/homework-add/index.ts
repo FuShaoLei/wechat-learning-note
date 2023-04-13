@@ -2,7 +2,18 @@
 import ActionSheet, { ActionSheetTheme } from 'tdesign-miniprogram/action-sheet/index';
 
 
+type SelectFile = {
+    path:string,
+    size:number,
+    name:string
+}
+
+// 照片array
 let imgItemArray: string[] = [];
+
+// 文件array，名字，长度
+let fileItemArray: SelectFile[] = [];
+
 Page({
 
     /**
@@ -199,12 +210,30 @@ Page({
     showClassPick(e: any) {
         const { item } = e.currentTarget.dataset;
 
-        this.setData({cur: item,},
-            () => {this.setData({ popVisible: true });},);
+        this.setData({ cur: item, },
+            () => { this.setData({ popVisible: true }); });
     },
     onVisibleChange(e: any) {
         this.setData({
             visible: e.detail.visible,
         });
+    },
+    clickAddMessageFile() {
+        wx.chooseMessageFile({
+            count: 10, // 可选择文件的数量
+            type: 'all', // 可选择的文件类型，可以是 'image', 'video', 'audio' 或 'file'
+            success: (res) => {
+                for(let i = 0;i<res.tempFiles.length;i++){
+                    let {path,size,name} = res.tempFiles[i];
+                   fileItemArray.push({path,size,name});
+                }
+                this.setData({fileItems:fileItemArray});
+            }
+        })
+    },
+    onClickFileItem(e:any){
+        const index = e.currentTarget.dataset.index;
+        fileItemArray.splice(index,1);
+        this.setData({fileItems:fileItemArray});
     }
 })

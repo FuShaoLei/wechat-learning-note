@@ -1,8 +1,6 @@
 <view class="homework-add-container">
 <view class="content-area-container">
 	<t-textarea t-class="textarea-eclass" placeholder="请输入文字" disableDefaultPadding="{{true}}" />
-
-
   <view class="selected-img-container">
       <img-list 
           imgUrlArray="{{imgArrays}}"
@@ -10,8 +8,22 @@
           bind:onClickListItem="clickImgItem"
           bind:onClickListItemClose="clickImgItemClose"></img-list>
   </view>
-
 </view>
+<view class="attach-file-container">
+  <t-cell-group >
+       <t-cell bindtap="clickAddMessageFile" hover arrow leftIcon="folder" bordered="{{false}}"  title="选择微信聊天中的文件"></t-cell>
+      <block wx:if="{{fileItems.length>0}}" wx:for="{{fileItems}}">
+        <t-cell wx:key="index" data-index="{{index}}" title="{{item.name}}">
+          <text data-index="{{index}}" catchtap="onClickFileItem"  slot="note">删除</text>
+        </t-cell>
+      </block>
+</t-cell-group>
+</view>
+
+
+
+
+
 <view class="action-btn-container">
     <t-cell-group >
         <t-cell 

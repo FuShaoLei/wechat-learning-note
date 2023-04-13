@@ -1,6 +1,6 @@
 <view class="image-container" bindtap="onClickItem">
     <view class="content-container">
-        <t-image t-class="t-img" class="image-main" src="{{imgUrl}}" error="slot">
+        <t-image t-class="t-img" mode="aspectFill" class="image-main" src="{{imgUrl}}" error="slot">
             <text class="error-text" slot="error">加载失败</text>
         </t-image>
     </view>
