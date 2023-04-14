@@ -1,3 +1,21 @@
 .grid-container {
     margin: 30rpx;
 }
+
+.home-list-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .home-item {
+        aspect-ratio: 1/1;
+        margin: 30rpx;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text {
+            margin-top: 15rpx;
+            font-size: 31rpx;
+        }
+    }
+}

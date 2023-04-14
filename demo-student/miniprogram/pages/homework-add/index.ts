@@ -3,9 +3,9 @@ import ActionSheet, { ActionSheetTheme } from 'tdesign-miniprogram/action-sheet/
 
 
 type SelectFile = {
-    path:string,
-    size:number,
-    name:string
+    path: string,
+    size: number,
+    name: string
 }
 
 // 照片array
@@ -36,8 +36,9 @@ Page({
             { label: '全选', checkAll: true },
             { label: '1班', value: 1 },
             { label: '2班', value: 2 },
-          ],
-          checkAllValues: [1, 2],
+        ],
+        checkAllValues: [1, 2],
+        selectedClass: "1班，2班"
     },
     /**
      * 获取当前日期，主要用于选择结束时间
@@ -216,18 +217,18 @@ Page({
             count: 10, // 可选择文件的数量
             type: 'all', // 可选择的文件类型，可以是 'image', 'video', 'audio' 或 'file'
             success: (res) => {
-                for(let i = 0;i<res.tempFiles.length;i++){
-                    let {path,size,name} = res.tempFiles[i];
-                   fileItemArray.push({path,size,name});
+                for (let i = 0; i < res.tempFiles.length; i++) {
+                    let { path, size, name } = res.tempFiles[i];
+                    fileItemArray.push({ path, size, name });
                 }
-                this.setData({fileItems:fileItemArray});
+                this.setData({ fileItems: fileItemArray });
             }
         })
     },
-    onClickFileItem(e:any){
+    onClickFileItem(e: any) {
         const index = e.currentTarget.dataset.index;
-        fileItemArray.splice(index,1);
-        this.setData({fileItems:fileItemArray});
+        fileItemArray.splice(index, 1);
+        this.setData({ fileItems: fileItemArray });
     },
 
     // 选择班级弹出框处理
@@ -241,16 +242,40 @@ Page({
         this.setData({ cur: item, }, () => { this.setData({ popVisible: true }); });
     },
 
-    onPopVisibleChange(e:any) {
+    onPopVisibleChange(e: any) {
         console.log("you click onPopVisibleChange");
         console.log(e);
-        this.setData({popVisible:e.detail.visible})
+        this.setData({ popVisible: e.detail.visible })
     },
-    onCheckAllChange(event:any) {
+    onCheckAllChange(event: any) {
+
         console.log('checkbox', event.detail.value);
-        this.setData({
-          checkAllValues: event.detail,
-        });
-      },
+        console.log(event);
+        this.setData({ checkAllValues: event.detail, });
+
+        let seletedClassText = "";
+
+        for (let i = 0; i < event.detail.value.length; i++) {
+            const label = this.data.options.find(item => item.value == event.detail.value[i])?.label;
+
+            if (label != undefined) {
+                console.log("label = " + label);
+                if (i != 0) {
+                    console.log("i !== 0");
+                    seletedClassText += "，"
+                }
+                seletedClassText += label;
+            }
+
+
+        }
+
+
+        this.setData({ selectedClass: seletedClassText });
+
+    },
+    clickPopConfirm(e: any) {
+        this.setData({ popVisible: false });
+    }
 
 })

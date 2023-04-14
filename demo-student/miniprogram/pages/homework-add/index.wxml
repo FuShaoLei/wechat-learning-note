@@ -13,7 +13,7 @@
   <t-cell-group >
        <t-cell bindtap="clickAddMessageFile" hover arrow leftIcon="folder" bordered="{{false}}"  title="选择微信聊天中的文件"></t-cell>
       <block wx:if="{{fileItems.length>0}}" wx:for="{{fileItems}}">
-        <t-cell wx:key="index" data-index="{{index}}" title="{{item.name}}">
+        <t-cell t-class-note="cell-item-note" t-class-title="t-class-title" wx:key="index" data-index="{{index}}" title="{{item.name}}">
           <text data-index="{{index}}" catchtap="onClickFileItem"  slot="note">删除</text>
         </t-cell>
       </block>
@@ -32,7 +32,7 @@
 			data-mode="date"
 			note="{{dateText || ''}}"
 			hover arrow />
-        <t-cell bindtap="showClassPick" title="选择班级" note="1班，2班" hover  arrow />
+        <t-cell bindtap="showClassPick" title="选择班级" note="{{selectedClass}}" hover  arrow />
     </t-cell-group>
 </view>
 
@@ -42,9 +42,8 @@
 <view class="popup-block-container">
 
   <view class="pop-action-container">
-    <text class="pop-cancel">取消</text>
     <text class="pop-title">选择班级</text>
-    <text class="pop-confirm">确定</text>
+    <text bindtap="clickPopConfirm" class="pop-confirm">确定</text>
   </view>
 	<view class="pop-list-main">
 		<t-checkbox-group

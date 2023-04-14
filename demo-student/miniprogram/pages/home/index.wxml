@@ -1,9 +1,14 @@
 <view class="home-container">
+    <view class="home-list-container">
+        <view class="home-item" bindtap="handlerClickStudentItem">
+            <t-icon name="usergroup" size="70rpx"></t-icon>
+            <text>学生</text>
+        </view>
+        <view class="home-item" bindtap="handlerClickHomeworkItem">
+            <t-icon name="view-module" size="70rpx"></t-icon>
+            <text>作业</text>
+        </view>
+    </view>
 
-    <t-grid class="grid-container" column="{{2}}" gutter="{{12}}">
-        <t-grid-item external-classes="t-grid-item-class" bindtap="handlerClickStudentItem" text="学生" icon="usergroup" />
-        <t-grid-item external-classes="t-grid-item-class" bindtap="handlerClickHomeworkItem" text="作业" icon="view-module" />
-    </t-grid>
-    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button>
 
 </view>
