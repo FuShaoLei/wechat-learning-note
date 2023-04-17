@@ -1,5 +1,5 @@
 .sutdent-card-container {
-	margin: 30rpx 0rpx;
+	margin-top: 30rpx;
 	background-color: #fff;
 	padding: 30rpx;
 	display: flex;
@@ -30,16 +30,30 @@
 	}
 }
 
-.echarts-radar-container{
+.echarts-radar-container {
+	margin-top: 30rpx;
 	height: 600rpx;
 	padding: 30rpx;
 	width: 100%;
 	background-color: #fff;
 }
 
-.echarts-line-container{
+.echarts-line-container {
 	height: 800rpx;
 	padding: 30rpx;
 	width: 100%;
 	background-color: #fff;
+}
+
+.tel-cell-tag {
+	margin-left: 15rpx;
+	background-color: rgb(230, 171, 64);
+	font-size: 23rpx;
+	padding: 10rpx 20rpx;
+	border-radius: 30rpx;
+	color: #fff;
+}
+
+.history-list-container {
+	margin: 30rpx 00rpx;
 }

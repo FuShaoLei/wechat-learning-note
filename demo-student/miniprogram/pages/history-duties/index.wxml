@@ -1,13 +1,5 @@
-<view class="user-container">
-
-	<!--用户-->
-	<view class="user-msg-container" bindtap="handlerUserClick">
-		<t-avatar>任</t-avatar>
-		<text class="nickname">任我行</text>
-	</view>
-	<!--职位-->
-	<view class="user-duty-container">
-		<t-collapse expandMutex expand-icon="{{true}}">
+<view class="history-duties-container">
+    <t-collapse expandMutex expand-icon="{{true}}">
 			<t-collapse-panel t-class-content="tcollapse-test" header="政教处主任" value="{{1}}">
 				<t-cell bordered="{{false}}" title="时间" note="2017/09 ~ 2018/06" />
 			</t-collapse-panel>
@@ -27,9 +19,4 @@
 				</t-cell-group>
 			</t-collapse-panel>
 		</t-collapse>
-	</view>
-
-	<view bindtap="onClickHitoryBtn" class="history-cell-container">
-		<t-cell title="历史职务" hover arrow/>
-	</view>
 </view>

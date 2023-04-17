@@ -1,0 +1,4 @@
+<view class="custom-cell-container">
+    <view class="custom-cell-title">年级</view>
+    <view class="custom-cell-note">七年级</view>
+</view>

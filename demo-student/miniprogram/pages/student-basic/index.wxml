@@ -1,19 +1,45 @@
 <view class="student-basic-container">
-	<view class="sutdent-card-container">
+	<view bindtap="onClickStudentCard" class="sutdent-card-container">
 		<t-avatar>任盈盈</t-avatar>
 		<view class="student-card-right-conatainer">
 			<view class="card-name-basic">
 				<text class="card-name">任盈盈</text>
 				<text class="card-class">1班</text>
 			</view>
-			<!--这应该是一个tag	-->
 			<text class="card-number">201703125</text>
 		</view>
 	</view>
+	<t-cell-group>
+		<t-cell bindtap="onClickCall" leftIcon="call" note="16666666666">
+			<view slot="title">
+				<text>任盈盈</text>
+				<text class="tel-cell-tag">本人</text>
+			</view>
+		</t-cell>
+		<t-cell bindtap="onClickCall" leftIcon="call" note="18888888888">
+			<view slot="title">
+				<text>任我行</text>
+				<text class="tel-cell-tag">父亲</text>
+			</view>
+		</t-cell>
+	</t-cell-group>
+
+
 	<view class="echarts-radar-container">
-	    <ec-canvas id="mychart-dom-radar-bar" canvas-id="mychart-radar" ec="{{ ecRadar }}"></ec-canvas>
+		<ec-canvas id="mychart-dom-radar-bar" canvas-id="mychart-radar" ec="{{ ecRadar }}"></ec-canvas>
 	</view>
-	<view class="echarts-line-container">
-	    <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ecLine }}"></ec-canvas>
+	<!-- <view class="echarts-line-container">
+		<ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ecLine }}"></ec-canvas>
+	</view> -->
+
+	<!--历史成绩-->
+	<view class="history-list-container">
+		<t-cell-group title="历史成绩">
+			<t-cell bindtap="onClickHistoryListItem" title="4月份月考" note="总分：457" hover arrow/>
+			<t-cell title="5月份月考" note="总分：417" h hover arrow/>
+			<t-cell title="中考" note="总分：557" h hover arrow/>
+		</t-cell-group>
 	</view>
+
+
 </view>

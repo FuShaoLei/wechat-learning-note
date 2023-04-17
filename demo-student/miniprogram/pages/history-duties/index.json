@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "t-collapse": "tdesign-miniprogram/collapse/collapse",
+		"t-collapse-panel": "tdesign-miniprogram/collapse-panel/collapse-panel",
+        "t-cell-group": "tdesign-miniprogram/cell-group/cell-group",
+        "t-cell": "tdesign-miniprogram/cell/cell"
+    },
+    "navigationBarTitleText": "历史职务"
+}

@@ -1,4 +1,4 @@
-// pages/my/index.ts
+// pages/homework-class/index.ts
 Page({
 
     /**
@@ -26,13 +26,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
-        this.getTabBar().init();
-        if (typeof this.getTabBar === 'function' &&
-            this.getTabBar()) {
-            this.getTabBar().setData({
-                active: 2
-            })
-        }
+
     },
 
     /**
@@ -68,11 +62,5 @@ Page({
      */
     onShareAppMessage() {
 
-    },
-    handlerUserClick() {
-        wx.navigateTo({url:'/pages/my-data/index'});
-    },
-    onClickHitoryBtn() {
-        wx.navigateTo({url:'/pages/history-duties/index'});
     }
 })

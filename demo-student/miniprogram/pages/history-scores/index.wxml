@@ -1,0 +1,10 @@
+<view class="history-scores-container">
+    <t-cell-group>
+        <t-cell title="语文" note="117"/>
+        <t-cell title="数学" note="92"/>
+        <t-cell title="英语" note="104"/>
+        <t-cell title="物理" note="77"/>
+        <t-cell title="化学" note="69"/>
+        <t-cell title="生物" note="83"/>
+    </t-cell-group>
+</view>

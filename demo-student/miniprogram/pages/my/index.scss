@@ -9,7 +9,36 @@
         font-size: 35rpx;
         margin-left: 30rpx;
     }
+    t-cell{
+        font-size: 20rpx;
+    }
 }
-.user-duty-container{
+.user-duty-container {
 	margin: 30rpx;
+}
+
+.test-container {
+    background-color: #fff;
+    height: 300rpx;
+    margin-top: 30rpx;
+}
+
+t-cell {
+    padding: 0;
+}
+
+.tcell-test{
+    padding: 0;
+}
+.almost-cell-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 30rpx;
+    .cell-note {
+        color: #a7a7a7;
+    }
+}
+.history-cell-container{
+    margin: 30rpx;
 }

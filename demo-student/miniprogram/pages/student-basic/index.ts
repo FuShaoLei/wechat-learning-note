@@ -65,7 +65,10 @@ function getRadarOption() {
       type: 'radar',
       data: [{
         value: [99, 110, 100, 75, 77, 20],
-        name: '预算'
+        name: '预算',
+        label: {
+          show: true
+        }
       }
       ]
     }]
@@ -215,5 +218,16 @@ Page({
      */
     onShareAppMessage() {
 
+    },
+    onClickCall() {
+      wx.makePhoneCall({
+        phoneNumber: '188888888888' //仅为示例，并非真实的电话号码
+      })
+    },
+    onClickHistoryListItem() {
+      wx.navigateTo({url:'/pages/history-scores/index'});
+    },
+    onClickStudentCard() {
+      wx.navigateTo({url:'/pages/student-detail/index'});
     }
 })

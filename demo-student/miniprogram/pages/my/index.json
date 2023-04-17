@@ -5,7 +5,8 @@
 		"t-collapse-panel": "tdesign-miniprogram/collapse-panel/collapse-panel",
         "t-cell-group": "tdesign-miniprogram/cell-group/cell-group",
         "t-cell": "tdesign-miniprogram/cell/cell",
-        "t-icon": "tdesign-miniprogram/icon/icon"
+        "t-icon": "tdesign-miniprogram/icon/icon",
+        "custom-cell":"../../components/custom-cell"
 	},
 	"navigationBarTitleText": "我的"
 }

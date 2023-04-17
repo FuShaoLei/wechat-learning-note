@@ -4,4 +4,9 @@
 		<t-button bindtap="handlerClickAddHomeWork" theme="primary" size="large" block>添加作业</t-button>
 	</view>
 
+	<t-cell-group>
+		<t-cell bindtap="onClickClassItem" title="1班" hover arrow />
+		<t-cell bindtap="onClickClassItem" title="5班" hover arrow />
+	</t-cell-group>
+
 </view>

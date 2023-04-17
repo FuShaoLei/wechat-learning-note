@@ -1,0 +1,12 @@
+<view class="student-detail-container">
+
+    <t-cell-group>
+        <t-cell title="证件照">
+            <t-avatar slot="note" >任</t-avatar>
+        </t-cell>
+        <t-cell title="姓名" note="任我行"  />
+        <t-cell title="工号" note="20230410"  />
+        <t-cell title="电话" note="1563250958"  />
+        <t-cell title="专业" note="软件工程"  />
+    </t-cell-group>
+</view>

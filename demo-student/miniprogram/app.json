@@ -10,7 +10,11 @@
         "pages/student-basic/index",
         "pages/homework-manager-main/index",
         "pages/homework-add/index",
-        "pages/camera-main/index"
+        "pages/camera-main/index",
+        "pages/homework-class/index",
+        "pages/history-duties/index",
+        "pages/history-scores/index",
+        "pages/student-detail/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

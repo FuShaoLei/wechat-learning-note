@@ -1,11 +1,11 @@
 <view class="home-container">
     <view class="home-list-container">
         <view class="home-item" bindtap="handlerClickStudentItem">
-            <t-icon name="usergroup" size="70rpx"></t-icon>
+            <t-icon name="usergroup" size="55rpx"></t-icon>
             <text>学生</text>
         </view>
         <view class="home-item" bindtap="handlerClickHomeworkItem">
-            <t-icon name="view-module" size="70rpx"></t-icon>
+            <t-icon name="view-module" size="55rpx"></t-icon>
             <text>作业</text>
         </view>
     </view>

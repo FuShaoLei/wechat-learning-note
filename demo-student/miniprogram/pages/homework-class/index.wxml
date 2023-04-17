@@ -1,0 +1,6 @@
+<!--pages/homework-class/index.wxml-->
+<view class="homework-class-container">
+    <view class="search-container">
+        <t-search model:value="{{value}}" placeholder="搜索" />
+    </view>
+</view>

@@ -65,5 +65,8 @@ Page({
     },
     handlerClickAddHomeWork() {
         wx.navigateTo({url:'/pages/homework-add/index'});
+    },
+    onClickClassItem() {
+        wx.navigateTo({url:'/pages/homework-class/index'});
     }
 })

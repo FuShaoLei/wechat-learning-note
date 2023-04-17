@@ -1,7 +1,9 @@
 {
     "usingComponents": {
 		"t-avatar": "tdesign-miniprogram/avatar/avatar",
-		"ec-canvas": "../../components/ec-canvas/ec-canvas"
+		"ec-canvas": "../../components/ec-canvas/ec-canvas",
+        "t-cell-group": "tdesign-miniprogram/cell-group/cell-group",
+        "t-cell": "tdesign-miniprogram/cell/cell"
 	
 	},
 	"navigationBarTitleText": "任盈盈"
