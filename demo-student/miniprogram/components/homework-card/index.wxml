@@ -1,0 +1,12 @@
+<view class="homework-card-container">
+    <view class="homework-top-container">
+        <view class="homework-subject">数学</view>
+        <view class="homework-title"> P48课后习题3，4以及 第5题的1，2小题啊啊啊啊啊</view>
+    </view>
+
+    <view class="homework-bottom-container">
+        <view class="homework-date">2017/04/05</view>
+        <view class="homework-status">进行中</view>
+    </view>
+
+</view>

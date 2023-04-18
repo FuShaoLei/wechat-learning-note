@@ -1,12 +1,29 @@
 <view class="student-detail-container">
 
-    <t-cell-group>
+    <t-cell-group title="基本信息">
         <t-cell title="证件照">
-            <t-avatar slot="note" >任</t-avatar>
+            <t-avatar slot="note">任</t-avatar>
         </t-cell>
-        <t-cell title="姓名" note="任我行"  />
-        <t-cell title="工号" note="20230410"  />
-        <t-cell title="电话" note="1563250958"  />
-        <t-cell title="专业" note="软件工程"  />
+        <t-cell title="姓名" note="任我行" />
+        <t-cell title="学号" note="20230410" />
+        <t-cell title="班级" note="七年级 （4）班" />
+        <t-cell title="性别" note="男" />
+        <t-cell title="家庭住址" note="阳光小区A栋201室" />
+        <t-cell title="入学时间" note="2018/09/01" />
+        <t-cell title="电话" note="1666666666" />
+    </t-cell-group>
+    <t-cell-group title="监护人信息">
+        <t-cell note="1222222222" >
+            <view slot="title">
+				<text>任我行</text>
+				<text class="tel-cell-tag">父亲</text>
+			</view>
+        </t-cell>
+        <t-cell note="1999999999">
+            <view slot="title">
+				<text>任夫人</text>
+				<text class="tel-cell-tag">母亲</text>
+			</view>
+        </t-cell>
     </t-cell-group>
 </view>

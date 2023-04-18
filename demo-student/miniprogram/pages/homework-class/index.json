@@ -1,6 +1,7 @@
 {
     "usingComponents": {
-        "t-search": "tdesign-miniprogram/search/search"
+        "t-search": "tdesign-miniprogram/search/search",
+        "homework-card":"../../components/homework-card"
     },
     "navigationBarTitleText": "1班"
 }

@@ -1,0 +1,41 @@
+.homework-card-container {
+    background-color: #fff;
+    margin: 30rpx;
+    padding: 30rpx;
+    font-size: 32rpx;
+}
+
+
+
+
+
+.homework-top-container{
+    display: flex;
+    flex-wrap: nowrap;
+
+    .homework-subject {
+        white-space: nowrap;
+        background-color: #d7d7d7;
+        padding: 0rpx 10rpx;
+        margin-right: 8rpx;
+    }
+    .homework-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+
+
+.homework-bottom-container {
+    display: flex;
+    margin-top: 30rpx;
+    font-size: 32rpx;
+    align-items: center;
+    justify-content: space-between;
+
+    .homework-status {
+        color: #8cd647;
+    }
+}

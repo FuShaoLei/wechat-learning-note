@@ -3,4 +3,9 @@
     <view class="search-container">
         <t-search model:value="{{value}}" placeholder="搜索" />
     </view>
+    <view class="homework-list-container">
+    <homework-card/>
+    <homework-card/>
+    <homework-card/>
+    </view>
 </view>
