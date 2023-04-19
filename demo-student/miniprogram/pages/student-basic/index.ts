@@ -35,6 +35,9 @@ function getRadarOption() {
     radar: {
       // shape: 'circle',
       indicator: [{
+        name: '总分',
+        max: 750
+      },{
         name: '语文',
         max: 150
       },
@@ -64,7 +67,7 @@ function getRadarOption() {
       name: '第一个月考',
       type: 'radar',
       data: [{
-        value: [99, 110, 100, 75, 77, 20],
+        value: [450, 99, 110, 100, 75, 77, 20],
         name: '预算',
         label: {
           show: true

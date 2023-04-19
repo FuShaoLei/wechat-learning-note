@@ -5,8 +5,11 @@
         </t-image>
     </view>
 
-    <view class="close-btn-container" catchtap="onClickCloseBtn">
-        <t-icon name="close" size="35rpx" data-name="close" />
-    </view>
+
+    <block wx:if="{{!isOnlyShow}}">
+        <view class="close-btn-container" catchtap="onClickCloseBtn">
+            <t-icon color="#fff" name="close" size="35rpx" data-name="close" />
+        </view>
+    </block>
 
 </view>

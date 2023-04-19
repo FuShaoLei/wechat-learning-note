@@ -1,13 +1,9 @@
 .homework-card-container {
     background-color: #fff;
-    margin: 30rpx;
-    padding: 30rpx;
-    font-size: 32rpx;
+    margin: 15rpx 0rpx;
+    padding: 32rpx;
+    font-size: 33rpx;
 }
-
-
-
-
 
 .homework-top-container{
     display: flex;
@@ -15,9 +11,12 @@
 
     .homework-subject {
         white-space: nowrap;
-        background-color: #d7d7d7;
-        padding: 0rpx 10rpx;
-        margin-right: 8rpx;
+        background-color: #d9e1ff;
+        color: #0052d9;
+        font-size: 23rpx;
+        margin-right: 13rpx;
+        padding: 10rpx 20rpx;
+	    border-radius: 30rpx;
     }
     .homework-title {
         overflow: hidden;
@@ -26,16 +25,7 @@
     }
 }
 
-
-
-.homework-bottom-container {
-    display: flex;
-    margin-top: 30rpx;
-    font-size: 32rpx;
-    align-items: center;
-    justify-content: space-between;
-
-    .homework-status {
-        color: #8cd647;
-    }
+.homework-date {
+    margin-top: 15rpx;
+    font-size: 30rpx;
 }

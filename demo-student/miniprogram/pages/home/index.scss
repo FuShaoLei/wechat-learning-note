@@ -1,13 +1,12 @@
-.grid-container {
-    margin: 30rpx;
-}
-
+$uniform-distance: 35rpx;
 .home-list-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: $uniform-distance;
+    margin: 0rpx $uniform-distance;
     .home-item {
+        margin-top: $uniform-distance;
         aspect-ratio: 1/1;
-        margin: 30rpx;
         background-color: #fff;
         display: flex;
         flex-direction: column;

@@ -11,7 +11,8 @@
         "t-popup": "tdesign-miniprogram/popup/popup",
         "t-button": "tdesign-miniprogram/button/button",
         "t-checkbox-group": "tdesign-miniprogram/checkbox-group/checkbox-group",
-        "t-checkbox": "tdesign-miniprogram/checkbox/checkbox"
+        "t-checkbox": "tdesign-miniprogram/checkbox/checkbox",
+        "t-image-viewer": "tdesign-miniprogram/image-viewer/image-viewer"
     },
     "navigationBarTitleText": "布置作业"
 }

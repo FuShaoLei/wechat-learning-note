@@ -1,11 +1,16 @@
-// pages/student-detail/index.ts
+// pages/homework-detail/index.ts
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        imgList:["https://tdesign.gtimg.com/miniprogram/images/example2.png","https://tdesign.gtimg.com/miniprogram/images/example1.png",
+        "https://tdesign.gtimg.com/miniprogram/images/example3.png","https://tdesign.gtimg.com/miniprogram/images/example4.png","https://tdesign.gtimg.com/miniprogram/images/example5.png"],
+        imgViewVisible: false,
+        closeBtn: true,
+        showIndex: true,
+        defaultIndex: 0
     },
 
     /**
@@ -63,9 +68,17 @@ Page({
     onShareAppMessage() {
 
     },
-    onClickPhone() {
-        wx.makePhoneCall({
-            phoneNumber: '12222222222' //仅为示例，并非真实的电话号码
-        })
+    clickImgItem(e:any) {
+        console.log(e);
+        console.log("you click img item");
+        const {index} = e.detail;
+        console.log("index = " + index);
+        this.setData({
+            imgViewVisible:true,
+            defaultIndex:index});
+    },
+    onImgViewerClose(e:any) {
+        this.setData({imgViewVisible:false});
     }
+
 })

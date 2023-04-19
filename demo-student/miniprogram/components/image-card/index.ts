@@ -7,6 +7,10 @@ Component({
       imgUrl:{
         type: String,
         value:''
+      },
+      isOnlyShow:{
+        type: Boolean,
+        value: false
       }
     },
 

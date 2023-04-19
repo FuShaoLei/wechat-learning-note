@@ -3,7 +3,9 @@
 		"t-avatar": "tdesign-miniprogram/avatar/avatar",
 		"ec-canvas": "../../components/ec-canvas/ec-canvas",
         "t-cell-group": "tdesign-miniprogram/cell-group/cell-group",
-        "t-cell": "tdesign-miniprogram/cell/cell"
+		"t-cell": "tdesign-miniprogram/cell/cell",
+        "t-collapse": "tdesign-miniprogram/collapse/collapse",
+		"t-collapse-panel": "tdesign-miniprogram/collapse-panel/collapse-panel"
 	
 	},
 	"navigationBarTitleText": "任盈盈"

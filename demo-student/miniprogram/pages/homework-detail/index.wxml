@@ -1,0 +1,36 @@
+<view class="homework-detail-container">
+
+<view class="homework-detail-title-container">
+    <view class="item homework-title"> P48课后习题3，4以及 第5题的1，2小题啊啊啊啊啊</view>
+    <view class="homework-img-list">
+        <img-list
+        isOnlyShow="{{true}}"
+        bind:onClickListItem="clickImgItem"
+        imgUrlArray="{{imgList}}"/>
+    </view>
+</view>
+
+<view class="homework-detial-cell-container">
+    <t-cell-group>
+        <t-cell leftIcon="folder" title="附件"/>
+        <t-cell title="asldjljlasd.png" hover/>
+        <t-cell title="malsdj.jpg" hover/>
+    </t-cell-group>
+
+    <view class="homework-detail-bottom-container">
+        <t-cell title="结束时间" note="2023/04/20" />
+    </view>
+
+</view>
+
+</view>
+
+
+<t-image-viewer
+    closeBtn="{{closeBtn}}"
+    showIndex="{{showIndex}}"
+    initial-index="{{defaultIndex}}"
+    visible="{{imgViewVisible}}"
+    images="{{imgList}}"
+    bind:change="onImgViewerChange"
+    bind:close="onImgViewerClose"/>  

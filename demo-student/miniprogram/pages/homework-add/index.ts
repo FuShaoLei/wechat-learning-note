@@ -15,7 +15,6 @@ let imgItemArray: string[] = [];
 let fileItemArray: SelectFile[] = [];
 
 Page({
-
     /**
      * 页面的初始数据
      */
@@ -38,7 +37,12 @@ Page({
             { label: '2班', value: 2 },
         ],
         checkAllValues: [1, 2],
-        selectedClass: "1班，2班"
+        selectedClass: "1班，2班",
+
+        imgViewVisible: false,
+        closeBtn: true,
+        showIndex: true,
+        defaultIndex: 0
     },
     /**
      * 获取当前日期，主要用于选择结束时间
@@ -90,6 +94,11 @@ Page({
             dateText: dateString
         });
 
+
+        console.log("homework-add onload");
+
+        imgItemArray = [];
+
     },
 
     /**
@@ -97,6 +106,7 @@ Page({
      */
     onReady() {
         this.getFormatterTime();
+        console.log("homework-add onReady");
     },
 
     /**
@@ -147,11 +157,12 @@ Page({
             sourceType: ['album', 'camera'],
             success: (res) => {
                 console.log("wx.chooseMedia success");
+                console.log("before imgItemArray.length = "+imgItemArray.length);
                 for (let i = 0; i < res.tempFiles.length; i++) {
                     console.log(res.tempFiles[i].tempFilePath);
                     imgItemArray.push(res.tempFiles[i].tempFilePath);
                 }
-                console.log("for tempArray.length = " + imgItemArray.length);
+                console.log("after tempArray.length = " + imgItemArray.length);
                 this.setData({ imgArrays: imgItemArray });
             }
         })
@@ -200,6 +211,11 @@ Page({
     clickImgItem(e: any) {
         console.log(e);
         console.log("you click clickImgItem");
+        const {index} = e.detail;
+        this.setData({imgList:imgItemArray, imgViewVisible:true, defaultIndex:index})
+    },
+    onImgViewerClose(){
+      this.setData({imgViewVisible:false});  
     },
     clickImgItemClose(e: any) {
         const { index } = e.detail;

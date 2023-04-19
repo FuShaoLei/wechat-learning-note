@@ -9,21 +9,6 @@
 			<text class="card-number">201703125</text>
 		</view>
 	</view>
-	<t-cell-group>
-		<t-cell bindtap="onClickCall" leftIcon="call" note="16666666666">
-			<view slot="title">
-				<text>任盈盈</text>
-				<text class="tel-cell-tag">本人</text>
-			</view>
-		</t-cell>
-		<t-cell bindtap="onClickCall" leftIcon="call" note="18888888888">
-			<view slot="title">
-				<text>任我行</text>
-				<text class="tel-cell-tag">父亲</text>
-			</view>
-		</t-cell>
-	</t-cell-group>
-
 
 	<view class="echarts-radar-container">
 		<ec-canvas id="mychart-dom-radar-bar" canvas-id="mychart-radar" ec="{{ ecRadar }}"></ec-canvas>
@@ -35,11 +20,36 @@
 	<!--历史成绩-->
 	<view class="history-list-container">
 		<t-cell-group title="历史成绩">
-			<t-cell bindtap="onClickHistoryListItem" title="4月份月考" note="总分：457" hover arrow/>
-			<t-cell title="5月份月考" note="总分：417" h hover arrow/>
-			<t-cell title="中考" note="总分：557" h hover arrow/>
+			<t-cell bindtap="onClickHistoryListItem" title="4月份月考" note="总分：457" hover arrow />
+			<t-cell title="5月份月考" note="总分：417" h hover arrow />
+			<t-cell title="中考" note="总分：557" h hover arrow />
 		</t-cell-group>
 	</view>
 
+	<!--历史成绩，不过是折叠图，展开后显示图表-->
+	<view class="collo-list-container">
+		<t-collapse expandMutex expand-icon="{{true}}">
+			<t-collapse-panel t-class-content="tcollapse-test" header="4月考" value="{{1}}">
+				<view class="echarts-radar-container">
+					<ec-canvas id="mychart-dom-radar-bar" canvas-id="mychart-radar" ec="{{ ecRadar }}"></ec-canvas>
+				</view>
+			</t-collapse-panel>
+			<t-collapse-panel t-class-content="tcollapse-test" header="5月份月考" value="{{0}}">
+				<view class="echarts-radar-container">
+					<ec-canvas id="mychart-dom-radar-bar" canvas-id="mychart-radar" ec="{{ ecRadar }}"></ec-canvas>
+				</view>
+			</t-collapse-panel>
+			<t-collapse-panel t-class-content="tcollapse-test" header="中考" value="{{2}}">
+				<view class="echarts-radar-container">
+					<ec-canvas id="mychart-dom-radar-bar" canvas-id="mychart-radar" ec="{{ ecRadar }}"></ec-canvas>
+				</view>
+			</t-collapse-panel>
+			<t-collapse-panel t-class-content="tcollapse-test" header="7月份月考" value="{{3}}">
+				<view class="echarts-radar-container">
+					<ec-canvas id="mychart-dom-radar-bar" canvas-id="mychart-radar" ec="{{ ecRadar }}"></ec-canvas>
+				</view>
+			</t-collapse-panel>
+		</t-collapse>
+	</view>
 
 </view>

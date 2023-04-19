@@ -72,3 +72,14 @@
 
 
 </view>
+
+
+
+<t-image-viewer
+    closeBtn="{{closeBtn}}"
+    showIndex="{{showIndex}}"
+    initial-index="{{defaultIndex}}"
+    visible="{{imgViewVisible}}"
+    images="{{imgList}}"
+    bind:change="onImgViewerChange"
+    bind:close="onImgViewerClose"/>  

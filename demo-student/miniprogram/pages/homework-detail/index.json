@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "img-list":"../../components/select-img-list",
+        "t-image-viewer": "tdesign-miniprogram/image-viewer/image-viewer",
+        "t-icon": "tdesign-miniprogram/icon/icon",
+        "t-cell-group": "tdesign-miniprogram/cell-group/cell-group",
+        "t-cell": "tdesign-miniprogram/cell/cell"
+    },
+    "navigationBarTitleText": "习题详情"
+}
