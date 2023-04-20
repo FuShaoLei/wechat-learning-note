@@ -1,18 +1,30 @@
-<view class="msg-detail-container">
+<!--index.wxml-->
+<view class="chat-container">
 
-    <view class="msg-detail-content-container">
-        <view class="msg-detail-content-left">
-            <t-avatar>萧</t-avatar>
-            <text class="left-text-container">你好啊</text>
-        </view>
+
+<scroll-view scroll-y scroll-into-view='{{toView}}' style='height: {{scrollHeight}};'>
+
+
+  <block wx:for="{{chatData}}" wx:for-index="index">
+    <view wx:if="{{item.status == 0}}" id="msg-{{index}}" class="msg-detail-content-left">
+      <t-avatar>萧</t-avatar>
+      <text class="left-text-container">{{item.text}}</text>
     </view>
 
-    <view class="msg-detail-input-container">
-        <t-input
-            placeholder="请输入">
-            <view slot="suffix">
-                <view class="verify" aria-role="button"> 发送 </view>
-            </view>
-        </t-input>
+    <view wx:else id="msg-{{index}}" class="msg-detail-content-right">
+      <view class="right-real-container">
+        <text class="right-text-container">{{item.text}}</text>
+        <t-avatar>任</t-avatar>
+      </view>
     </view>
+  </block>
+
+</scroll-view>
+
+
+
+<view class="bottom-container" style='bottom: {{inputBottom}}'>
+  <input bindconfirm='sendClick' adjust-position='{{false}}' value='{{inputVal}}' confirm-type='send' bindfocus='focus' bindblur='blur' placeholder="请输入" />
+</view>
+
 </view>

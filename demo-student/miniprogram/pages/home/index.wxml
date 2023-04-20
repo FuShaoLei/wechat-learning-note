@@ -1,6 +1,15 @@
 <view class="home-container">
 <view class="home-banner-container">
-    <t-image width="100%" mode="aspectFill" height="300rpx" src="https://cdn.jsdelivr.net/gh/fushaolei/img/school_banner.jpg"/>
+    <t-swiper
+        current="{{current}}"
+        autoplay="{{autoplay}}"
+        duration="{{duration}}"
+        interval="{{interval}}"
+        navigation="{{ { type: 'dots' } }}"
+        list="{{swiperList}}"
+        bind:click="onTap"
+        bind:change="onChange">
+    </t-swiper>
 </view>
     <view class="home-list-container">
         <view class="home-item" bindtap="handlerClickStudentItem">

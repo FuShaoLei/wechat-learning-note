@@ -5,7 +5,11 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        current: 0,
+        autoplay: true,
+        duration: 500,
+        interval: 5000,
+        swiperList:["https://tdesign.gtimg.com/miniprogram/images/swiper1.png","https://tdesign.gtimg.com/miniprogram/images/swiper2.png","https://tdesign.gtimg.com/miniprogram/images/swiper1.png","https://tdesign.gtimg.com/miniprogram/images/swiper2.png"],
     },
 
     /**
