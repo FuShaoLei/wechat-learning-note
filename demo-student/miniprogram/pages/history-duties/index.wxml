@@ -1,17 +1,17 @@
 <view class="history-duties-container">
     <t-collapse expandMutex expand-icon="{{true}}">
-			<t-collapse-panel t-class-content="tcollapse-test" header="政教处主任" value="{{1}}">
+			<t-collapse-panel header-right-content="2016/09 ~ 2017/06" t-class-content="tcollapse-test" header="政教处主任" value="{{1}}">
 				<t-cell bordered="{{false}}" title="时间" note="2017/09 ~ 2018/06" />
 			</t-collapse-panel>
 
-			<t-collapse-panel header="数学老师" value="{{0}}">
+			<t-collapse-panel header-right-content="2017/09 ~ 2018/06" header="数学老师" value="{{0}}">
 				<t-cell-group>
 					<t-cell bordered="{{false}}" title="年级" note="七年级" />
 					<t-cell bordered="{{false}}" title="班级" note="1班" />
 					<t-cell bordered="{{false}}" title="时间" note="2017/09 ~ 2018/06" />
 				</t-cell-group>
 			</t-collapse-panel>
-			<t-collapse-panel header="体育老师" value="{{2}}">
+			<t-collapse-panel header-right-content="2015/09 ~ 2016/06" header="体育老师" value="{{2}}">
 				<t-cell-group>
 					<t-cell bordered="{{false}}" title="年级" note="七年级" />
 					<t-cell bordered="{{false}}" title="班级" note="3班" />
