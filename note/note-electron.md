@@ -134,3 +134,59 @@ yarn run make
 ```
 
 打包完成后就可以在out文件夹里看到相应的包了
+
+
+
+## 使用electron-builder打包成可安装程序
+
+[electron-builder官网传送](https://www.electron.build/)
+
+安装electron-builder：
+
+```
+yarn add electron-builder --dev
+```
+
+在你的`package.json`文件添加一些electron-builder的配置语句，我的完整`package.json`文件如下，供参考：
+
+```json
+{
+  "name": "2023042103",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "mygod",
+  "description": "hello the fucking world",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64"
+  },
+  "devDependencies": {
+    "electron": "^24.1.2",
+    "electron-builder": "^23.6.0"
+  },
+  "build": {
+    "appId": "com.github.fushaolei",
+    "productName": "demo2023042103",
+    "win": {
+      "target": "nsis",
+      "icon":"./icon.jpg"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
+
+```
+
+然后在cmd中：
+
+```
+yarn run build
+```
+
