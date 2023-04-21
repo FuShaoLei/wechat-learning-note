@@ -139,6 +139,8 @@ yarn run make
 
 ## 使用electron-builder打包成可安装程序
 
+可参考仓库中的[demo-electron-build](../demo-electron-build])项目
+
 [electron-builder官网传送](https://www.electron.build/)
 
 安装electron-builder：
