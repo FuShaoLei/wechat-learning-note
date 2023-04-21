@@ -1,0 +1,31 @@
+{
+  "name": "2023042103",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "mygod",
+  "description": "hello the fucking world",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64"
+  },
+  "devDependencies": {
+    "electron": "^24.1.2",
+    "electron-builder": "^23.6.0"
+  },
+  "build": {
+    "appId": "com.github.fushaolei",
+    "productName": "demo2023042103",
+    "win": {
+      "target": "nsis",
+      "icon":"./icon.jpg"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
