@@ -192,3 +192,38 @@ yarn add electron-builder --dev
 yarn run build
 ```
 
+## vue和electron的结合
+
+参考文章：[最简洁Vue+Electron项目搭建教程](https://zhuanlan.zhihu.com/p/335225253)
+
+全局安装vue-cli（记得以管理员身份打开cmd）：
+
+```
+npm install -g @vue/cli
+# OR
+yarn global add @vue/cli
+```
+
+创建项目
+
+```
+vue create vue-demo
+```
+
+然后`cd vue-deom`进入你的项目里，再添加一些东西：
+
+```
+vue add electron-builder
+```
+
+运行：
+
+```
+yarn run electron:serve
+```
+
+这时候，可能会出现这个错误：
+
+![](https://cdn.jsdelivr.net/gh/fushaolei/img/20230423115948.png)
+
+这是因为你的node 版本不兼容的问题，需要换个node版本，我这里直接是卸载现有版本然后直接下载了，[历史版本点击这里查看](https://nodejs.org/zh-cn/download/releases)，建议下载16的版本，因为17的版本会出现什么ssl的问题，这里也不多讲了，反正不要用17的版本。卸载旧的node的然后在安装新的之后，再次运行，应该就没问题了。
