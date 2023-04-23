@@ -226,4 +226,6 @@ yarn run electron:serve
 
 ![](https://cdn.jsdelivr.net/gh/fushaolei/img/20230423115948.png)
 
-这是因为你的node 版本不兼容的问题，需要换个node版本，我这里直接是卸载现有版本然后直接下载了，[历史版本点击这里查看](https://nodejs.org/zh-cn/download/releases)，建议下载16的版本，因为17的版本会出现什么ssl的问题，这里也不多讲了，反正不要用17的版本。卸载旧的node的然后在安装新的之后，再次运行，应该就没问题了。
+这是因为你的node 版本不兼容的问题，需要换个node版本，我这里直接是卸载现有版本然后直接下载了，[历史版本点击这里查看](https://nodejs.org/zh-cn/download/releases)，建议[下载16的版本](https://nodejs.org/download/release/v16.20.0/)，因为17的版本会出现什么ssl的问题，这里也不多讲了，反正不要用17的版本。
+
+卸载旧的node的然后在安装新的之后，再次运行，应该就没问题了。
