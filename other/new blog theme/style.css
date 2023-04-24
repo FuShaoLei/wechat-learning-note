@@ -1,7 +1,13 @@
 :root{
     --distance-length: 22px;
 }
+html{
+    margin: 0;
+    padding: 0;
+}
 body {
+    margin: 0;
+    padding: 0;
     display: flex;
     color: #fff;
     font-family: "LXGW WenKai Lite", sans-serif;
@@ -11,15 +17,15 @@ body {
 .container {
     background-color: #444;
     width: 800px;
-    height: 1000px;
 }
 
 .header-conotainer{
-    padding: var(--distance-length);
+    margin: 0 var(--distance-length);
+    margin-top: 20px;
 }
 .header-menu-container{
     display: flex;
-    margin-top: 3px;
+    margin-top: 1px;
 }
 .header-menu-item {
     font-size: 18px;
@@ -30,12 +36,10 @@ body {
     font-weight: bolder;
 }
 
-
-
-
 .content-container {
     margin: 0 var(--distance-length);
-    margin-top: 15px;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 
